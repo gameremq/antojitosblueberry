@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Antojitos Blueberry</title>
+<style>
+:root{--bg1:#fff;--bg2:#f5f5f5;--bg3:#eee;--tx1:#1a1a1a;--tx2:#666;--tx3:#999;--bd1:rgba(0,0,0,.1);--bd2:rgba(0,0,0,.2);--r1:8px;--r2:12px}
+@media(prefers-color-scheme:dark){:root{--bg1:#1e1e1e;--bg2:#2a2a2a;--bg3:#141414;--tx1:#f0f0f0;--tx2:#aaa;--tx3:#777;--bd1:rgba(255,255,255,.1);--bd2:rgba(255,255,255,.2)}}
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{background:var(--bg3);padding:10px}
+input,select{width:100%;padding:8px 10px;border:0.5px solid var(--bd2);border-radius:var(--r1);background:var(--bg1);color:var(--tx1);font-size:13px}
+input:focus,select:focus{outline:none;border-color:#534AB7}
+button{cursor:pointer;font-family:inherit}
+.app{max-width:500px;margin:0 auto;position:relative}
+.hdr{background:#534AB7;color:#fff;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;border-radius:12px 12px 0 0}
+.hdr-t{font-size:16px;font-weight:500}
+.hdr-s{font-size:11px;opacity:.7;margin-top:1px}
+.hdr-btn{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:var(--r1);padding:5px 12px;font-size:12px}
+.tabs{display:flex;background:var(--bg1);border-bottom:0.5px solid var(--bd1);overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;padding:9px 11px;border:none;background:transparent;font-size:11px;color:var(--tx2);border-bottom:2px solid transparent;white-space:nowrap}
+.tab.on{color:#534AB7;border-bottom-color:#534AB7;font-weight:500}
+.scr{padding:14px;background:var(--bg2);min-height:480px}
+.card{background:var(--bg1);border:0.5px solid var(--bd1);border-radius:var(--r2);padding:12px 14px;margin-bottom:8px}
+.mrow{display:flex;gap:8px;margin-bottom:8px}
+.met{background:var(--bg2);border-radius:var(--r1);padding:10px 12px;flex:1;min-width:0}
+.mlb{font-size:11px;color:var(--tx2);margin-bottom:2px}
+.mvl{font-size:18px;font-weight:500;line-height:1.2}
+.msb{font-size:10px;color:var(--tx3);margin-top:2px}
+.btn{border-radius:var(--r1);padding:8px 14px;font-size:13px;font-weight:500;border:1px solid}
+.p{background:#534AB7;color:#fff;border-color:#534AB7}
+.s{background:#1D9E75;color:#fff;border-color:#1D9E75}
+.d{background:#D85A30;color:#fff;border-color:#D85A30}
+.op{background:transparent;color:#534AB7;border-color:#534AB7}
+.od{background:transparent;color:#D85A30;border-color:#D85A30}
+.fw{width:100%;display:block;text-align:center;margin-bottom:8px}
+.sm{padding:5px 10px;font-size:12px}
+.bdg{display:inline-block;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500}
+.bp{background:#EEEDFE;color:#3C3489}.bt{background:#E1F5EE;color:#0F6E56}.bc{background:#FAECE7;color:#712B13}.ba{background:#FAEEDA;color:#633806}.br{background:#FCEBEB;color:#A32D2D}.bg{background:#EAF3DE;color:#27500A}
+.fld{margin-bottom:11px}
+.flb{font-size:12px;color:var(--tx2);margin-bottom:4px}
+.rb{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.li{display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:0.5px solid var(--bd1)}
+.li:last-child{border-bottom:none}
+.lt{font-size:13px;font-weight:500;margin-bottom:2px}
+.ls{font-size:11px;color:var(--tx2);line-height:1.5}
+.lv{font-size:14px;font-weight:500;text-align:right;flex-shrink:0;margin-left:10px}
+.emp{text-align:center;padding:40px 0;color:var(--tx2);font-size:13px}
+.inb{background:var(--bg2);border-radius:var(--r1);padding:10px 12px;font-size:12px;color:var(--tx2);margin-bottom:12px;line-height:1.6}
+.pb{height:4px;background:var(--bd1);border-radius:2px;margin-top:6px;overflow:hidden}
+.pf{height:100%;border-radius:2px}
+.ov{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.52);z-index:10;display:flex;align-items:flex-end}
+.sh{background:var(--bg1);border-radius:12px 12px 0 0;padding:16px;width:100%;max-height:82vh;overflow-y:auto}
+.shh{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.sht{font-size:15px;font-weight:500}
+.xb{width:28px;height:28px;border-radius:50%;background:var(--bg2);border:none;font-size:18px;line-height:28px;text-align:center;color:var(--tx2)}
+.av{width:38px;height:38px;border-radius:50%;background:#EEEDFE;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:500;color:#3C3489;flex-shrink:0}
+.sep{height:0.5px;background:var(--bd1);margin:10px 0}
+.qg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ab{padding:10px;border-radius:var(--r1);border:0.5px solid var(--bd2);background:var(--bg2);color:var(--tx1);font-size:12px;font-weight:500;text-align:center;width:100%}
+.bc2{display:flex;align-items:flex-end;gap:4px;height:120px;padding:0 4px}
+.bcl{display:flex;flex-direction:column;align-items:center;flex:1}
+.br2{width:100%;border-radius:3px 3px 0 0}
+.bla{font-size:9px;color:var(--tx3);margin-top:3px;text-align:center;max-width:40px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.blv{font-size:9px;color:var(--tx2);margin-bottom:2px}
+.fch{display:inline-block;padding:4px 10px;font-size:12px;border-radius:6px;border:1px solid var(--bd1);margin:3px;cursor:pointer;background:var(--bg2);color:var(--tx2)}
+.fch.sel{background:#534AB7;color:#fff;border-color:#534AB7}
+.ci{display:flex;align-items:center;gap:8px;padding:7px;background:var(--bg2);border-radius:var(--r1);margin-bottom:6px}
+.ci select{flex:1;font-size:12px;padding:5px 8px}
+.ci input{width:55px;flex-shrink:0;font-size:12px;padding:5px 8px;text-align:center}
+.ci button{flex-shrink:0;background:none;border:none;color:#E24B4A;font-size:20px;padding:0 4px;line-height:1}
+.cajav{background:#E1F5EE;border:1px solid #5DCAA5;border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.cajac{background:var(--bg2);border:0.5px solid var(--bd1);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <div class="hdr">
+    <div><div class="hdr-t">Antojitos Blueberry</div><div class="hdr-s" id="hsub">Panel de gestión</div></div>
+    <button class="hdr-btn" onclick="openCfg()">Configurar</button>
+  </div>
+  <div class="tabs" id="tabs"></div>
+  <div class="scr" id="scr"></div>
+  <div id="mr"></div>
+</div>
+<script>
+const SAB=['Vainilla','Oreo','Maracuyá','Pay Limón','Fresa','Piña','Coco','Cheesecake','Café','Mango','Galleta María','Banano','Queso','Chocolate','Ronpasa'];
+const COL=['#534AB7','#1D9E75','#D85A30','#BA7517','#E24B4A','#185FA5','#993556','#3B6D11','#854F0B','#0F6E56','#712B13','#633806','#3C3489','#993C1D','#888780'];
+const CEG=['Transporte','Ingredientes','Empaques','Gas/Electricidad','Inversión en stock','Publicidad','Otros gastos'];
+const CIN=['Venta adicional','Anticipo cliente','Devolución','Otro ingreso'];
+const TABS=[{id:'inicio',l:'Inicio'},{id:'caja',l:'Caja'},{id:'stock',l:'Stock'},{id:'ventas',l:'Ventas'},{id:'finanzas',l:'Finanzas'},{id:'costos',l:'Costos'},{id:'clientes',l:'Clientes'},{id:'reportes',l:'Reportes'}];
+
+const defD=()=>({cfg:{pu:.25,pp:.65,bpt:11},stock:Object.fromEntries(SAB.map(s=>[s,{d:0,p:0}])),ventas:[],trans:[],clientes:[],cierres:[],caja:null,costos:Object.fromEntries(SAB.map(s=>[s,{ing:'',qty:.15,unit:'kg',cost:0}]))});
+let D=defD(),tab='inicio',selCli=null,cmdItems=[{s:SAB[0],q:1}];
+
+const uid=()=>Math.random().toString(36).slice(2,9);
+const hoy=()=>new Date().toISOString().slice(0,10);
+const $=id=>document.getElementById(id);
+const f$=v=>'$'+(+v||0).toFixed(2);
+const fd=d=>d?d.slice(5):'-';
+const fdl=d=>{if(!d)return'-';const[y,m,dd]=d.split('-');return`${dd}/${m}/${y}`;};
+const vl=v=>{if(v.tipo==='comanda')return(v.items||[]).map(i=>`${i.q} ${i.s}`).join(', ');if(v.tipo==='unitario')return`${v.cant} bolo${v.cant!==1?'s':''} ×${f$(D.cfg.pu)}`;if(v.tipo==='promo')return`${v.promos} promo ×${f$(D.cfg.pp)}`;return`${v.cant} bolos mayorista`;};
+const sumV=vs=>vs.reduce((a,v)=>a+v.total,0);
+const vdDia=d=>D.ventas.filter(v=>v.fecha===d);
+const egDia=d=>D.trans.filter(t=>t.fecha===d&&t.tipo==='egreso').reduce((a,t)=>a+t.monto,0);
+const inDia=d=>D.trans.filter(t=>t.fecha===d&&t.tipo==='ingreso').reduce((a,t)=>a+t.monto,0);
+
+function loadData(){try{const r=localStorage.getItem('ab_v3');if(r){const s=JSON.parse(r);D={...defD(),...s};D.stock={...defD().stock,...(s.stock||{})};D.costos={...defD().costos,...(s.costos||{})};}}catch(e){}renderAll();}
+function save(){try{localStorage.setItem('ab_v3',JSON.stringify(D));}catch(e){}}
+function renderAll(){renderTabs();renderScr();const h=$('hsub');if(h)h.textContent=D.caja?'Caja abierta: '+fdl(D.caja):'Sin caja abierta';}
+function renderTabs(){$('tabs').innerHTML=TABS.map(t=>`<button class="tab${tab===t.id?' on':''}" onclick="go('${t.id}')">${t.l}</button>`).join('');}
+function go(id){tab=id;selCli=null;renderAll();}
+function renderScr(){const m={inicio:sI,caja:sCaja,stock:sStock,ventas:sVentas,finanzas:sFin,costos:sCostos,clientes:sCli,reportes:sRep};$('scr').innerHTML=(m[tab]||sI)();}
+
+// INICIO
+function sI(){
+  const h=hoy(),cv=D.caja===h;
+  const vh=vdDia(h),iv=sumV(vh),eh=egDia(h),ih=inDia(h),ut=iv+ih-eh;
+  const td=SAB.reduce((a,s)=>a+D.stock[s].d,0),ag=SAB.filter(s=>D.stock[s].d===0).length;
+  const bj=SAB.filter(s=>D.stock[s].d>0&&D.stock[s].d<4);
+  const ban=cv
+    ?`<div class="cajav"><div style="display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:12px;font-weight:500;color:#0F6E56">Caja abierta</div><div style="font-size:11px;color:#1D9E75">${fdl(h)}</div></div><button class="btn d sm" onclick="openM('cierre')">Cerrar caja</button></div></div>`
+    :`<div style="background:#FCEBEB;border:1px solid #F09595;border-radius:10px;padding:12px 14px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:12px;font-weight:500;color:#A32D2D">Sin caja abierta</div><div style="font-size:11px;color:#E24B4A">Abre la caja para registrar ventas</div></div><button class="btn p sm" onclick="abrirCaja()">Abrir caja</button></div>`;
+  return`${ban}
+  <div class="mrow"><div class="met"><div class="mlb">Stock total</div><div class="mvl" style="color:#534AB7">${td}</div><div class="msb">${ag} agotados</div></div><div class="met"><div class="mlb">Ventas hoy</div><div class="mvl" style="color:#1D9E75">${vh.length}</div><div class="msb">${f$(iv)}</div></div></div>
+  <div class="mrow"><div class="met"><div class="mlb">Ingresos hoy</div><div class="mvl" style="color:#1D9E75">${f$(iv+ih)}</div></div><div class="met"><div class="mlb">Egresos hoy</div><div class="mvl" style="color:#D85A30">${f$(eh)}</div></div><div class="met"><div class="mlb">Utilidad</div><div class="mvl" style="color:${ut>=0?'#1D9E75':'#D85A30'}">${f$(ut)}</div></div></div>
+  ${bj.length?`<div class="card" style="border-left:3px solid #BA7517"><div style="font-size:12px;font-weight:500;color:#633806;margin-bottom:6px">Stock bajo</div>${bj.map(s=>`<span class="bdg ba" style="margin:2px">${s}: ${D.stock[s].d}</span>`).join('')}</div>`:''}
+  <div class="card"><div style="font-size:13px;font-weight:500;margin-bottom:10px">Acciones rápidas</div><div class="qg">
+    <button class="ab btn ${cv?'p':''}" style="${!cv?'opacity:.4;cursor:default':''}" onclick="${cv?"openM('comanda')":''}">+ Comanda</button>
+    <button class="ab btn" style="border-color:#534AB7;color:#534AB7;${!cv?'opacity:.4;cursor:default':''}" onclick="${cv?"openM('simple')":''}">+ Venta simple</button>
+    <button class="ab btn" style="border-color:#D85A30;color:#D85A30" onclick="openM('egreso')">+ Egreso</button>
+    <button class="ab btn" style="border-color:#1D9E75;color:#1D9E75" onclick="openM('prod')">+ Producción</button>
+  </div></div>
+  <div class="card"><div class="rb"><span style="font-size:13px;font-weight:500">Últimas ventas</span><button class="btn op sm" onclick="go('ventas')">Ver todas</button></div>
+  ${D.ventas.length===0?'<div class="emp" style="padding:20px 0">Sin ventas</div>':[...D.ventas].reverse().slice(0,5).map(v=>`<div class="li"><div style="flex:1"><div class="lt">${v.cliente||(v.items?v.items.map(i=>i.s).join(', '):v.sab)||'Venta'}</div><div class="ls">${vl(v)}</div></div><div class="lv" style="color:#1D9E75">${f$(v.total)}</div></div>`).join('')}
+  </div>`;
+}
+function abrirCaja(){D.caja=hoy();save();renderAll();}
+
+// CAJA
+function sCaja(){
+  const h=hoy(),cv=D.caja===h;
+  const vh=vdDia(h),iv=sumV(vh),eh=egDia(h),ih=inDia(h);
+  return`<div class="rb"><span style="font-size:15px;font-weight:500">Caja diaria</span></div>
+  ${cv?`<div class="cajav" style="margin-bottom:10px">
+    <div style="font-size:13px;font-weight:500;color:#0F6E56;margin-bottom:8px">Caja abierta — ${fdl(h)}</div>
+    <div class="mrow" style="margin-bottom:8px"><div class="met"><div class="mlb">Ventas</div><div class="mvl" style="font-size:15px;color:#1D9E75">${f$(iv)}</div><div class="msb">${vh.length} registros</div></div><div class="met"><div class="mlb">Egresos</div><div class="mvl" style="font-size:15px;color:#D85A30">${f$(eh)}</div></div><div class="met"><div class="mlb">Utilidad</div><div class="mvl" style="font-size:15px;color:${iv+ih-eh>=0?'#1D9E75':'#D85A30'}">${f$(iv+ih-eh)}</div></div></div>
+    <button class="btn d fw" style="margin-bottom:0" onclick="openM('cierre')">Cerrar caja del día</button>
+  </div>`:`<div style="background:#FCEBEB;border:1px solid #F09595;border-radius:10px;padding:14px;margin-bottom:10px;text-align:center"><div style="font-size:13px;font-weight:500;color:#A32D2D;margin-bottom:6px">No hay caja abierta</div><div style="font-size:12px;color:#E24B4A;margin-bottom:10px">Abre la caja para empezar el día</div><button class="btn p" onclick="abrirCaja()">Abrir caja — ${fdl(h)}</button></div>`}
+  <div style="font-size:13px;font-weight:500;margin-bottom:8px">Historial de cierres</div>
+  ${D.cierres.length===0?'<div class="emp" style="padding:24px 0">Sin cierres registrados</div>':[...D.cierres].reverse().map(c=>`<div class="cajac"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px"><div><div style="font-size:13px;font-weight:500">${fdl(c.fecha)}</div><div style="font-size:11px;color:var(--tx2)">${c.nV} venta${c.nV!==1?'s':''}</div></div><span class="bdg bt">Cerrada</span></div><div style="display:flex;gap:12px;font-size:12px"><span style="color:#1D9E75">Ventas: <strong>${f$(c.tv)}</strong></span><span style="color:#D85A30">Egresos: <strong>${f$(c.te)}</strong></span><span style="color:${c.ut>=0?'#1D9E75':'#D85A30'}">Util: <strong>${f$(c.ut)}</strong></span></div></div>`).join('')}`;
+}
+
+// STOCK
+function sStock(){
+  const td=SAB.reduce((a,s)=>a+D.stock[s].d,0),tp=SAB.reduce((a,s)=>a+D.stock[s].p,0),ag=SAB.filter(s=>D.stock[s].d===0).length;
+  return`<div class="rb"><span style="font-size:15px;font-weight:500">Inventario</span><button class="btn p sm" onclick="openM('prod')">+ Producción</button></div>
+  <div class="mrow"><div class="met"><div class="mlb">Disponibles</div><div class="mvl" style="color:#534AB7">${td}</div></div><div class="met"><div class="mlb">Producidos</div><div class="mvl">${tp}</div></div><div class="met"><div class="mlb">Agotados</div><div class="mvl" style="color:#D85A30">${ag}</div></div></div>
+  ${SAB.map((s,i)=>{const st=D.stock[s];const pct=st.p>0?Math.min(100,Math.round(st.d/st.p*100)):0;const out=st.d===0,low=st.d>0&&st.d<4;
+  return`<div class="card" style="border-left:3px solid ${COL[i]}"><div style="display:flex;justify-content:space-between;align-items:center"><div style="flex:1"><div style="display:flex;align-items:center;gap:6px;margin-bottom:2px"><span style="font-size:13px;font-weight:500">${s}</span>${out?'<span class="bdg br">Agotado</span>':low?'<span class="bdg ba">Bajo</span>':''}</div><div style="font-size:11px;color:var(--tx2)">${st.d} disponibles · ${st.p} producidos</div><div class="pb"><div class="pf" style="width:${pct}%;background:${out?'#E24B4A':low?'#EF9F27':COL[i]}"></div></div></div><button class="btn sm" style="margin-left:10px;border:0.5px solid var(--bd2);background:var(--bg2);color:var(--tx1)" onclick="openM('ajuste','${s}')">Ajustar</button></div></div>`;}).join('')}`;
+}
+
+// VENTAS
+function sVentas(){
+  const vs=[...D.ventas].reverse(),tot=sumV(vs);
+  return`<div class="rb"><span style="font-size:15px;font-weight:500">Ventas</span><div style="display:flex;gap:6px"><button class="btn p sm" onclick="openM('comanda')">+ Comanda</button><button class="btn op sm" onclick="openM('simple')">+ Simple</button></div></div>
+  <div class="mrow"><div class="met"><div class="mlb">Registros</div><div class="mvl">${vs.length}</div></div><div class="met"><div class="mlb">Total</div><div class="mvl" style="color:#1D9E75">${f$(tot)}</div></div></div>
+  <div class="card">${vs.length===0?'<div class="emp">Sin ventas</div>':vs.map(v=>`<div class="li"><div style="flex:1"><div style="display:flex;align-items:center;gap:6px;margin-bottom:2px"><span class="lt">${v.cliente||(v.tipo==='comanda'?'Comanda':v.sab||'Venta')}</span><span class="bdg ${v.tipo==='comanda'?'bg':v.tipo==='mayorista'?'bt':'bp'}">${v.tipo}</span></div><div class="ls">${vl(v)}</div><div class="ls">${fd(v.fecha)}</div></div><div><div class="lv" style="color:#1D9E75">${f$(v.total)}</div><button onclick="delV('${v.id}')" style="font-size:11px;color:#E24B4A;background:none;border:none;cursor:pointer;display:block;margin-top:2px;margin-left:auto">Eliminar</button></div></div>`).join('')}</div>`;
+}
+function delV(id){D.ventas=D.ventas.filter(v=>v.id!==id);save();renderScr();}
+
+// FINANZAS
+function sFin(){
+  const tv=sumV(D.ventas),te=D.trans.filter(t=>t.tipo==='egreso').reduce((a,t)=>a+t.monto,0),ti=D.trans.filter(t=>t.tipo==='ingreso').reduce((a,t)=>a+t.monto,0),ut=tv+ti-te;
+  const all=[...D.trans].reverse();
+  return`<div class="rb"><span style="font-size:15px;font-weight:500">Finanzas</span><div style="display:flex;gap:6px"><button class="btn s sm" onclick="openM('ingreso')">+ Ingreso</button><button class="btn d sm" onclick="openM('egreso')">+ Egreso</button></div></div>
+  <div class="mrow"><div class="met"><div class="mlb">Ventas acum.</div><div class="mvl" style="color:#1D9E75">${f$(tv)}</div></div><div class="met"><div class="mlb">Otros ing.</div><div class="mvl" style="color:#1D9E75">${f$(ti)}</div></div><div class="met"><div class="mlb">Egresos</div><div class="mvl" style="color:#D85A30">${f$(te)}</div></div></div>
+  <div class="card" style="margin-bottom:10px"><div style="font-size:12px;color:var(--tx2)">Utilidad neta acumulada</div><div style="font-size:26px;font-weight:500;color:${ut>=0?'#1D9E75':'#D85A30'};margin-top:4px">${f$(ut)}</div></div>
+  <div class="card">${all.length===0?'<div class="emp">Sin transacciones</div>':all.map(t=>`<div class="li"><div style="flex:1"><div style="display:flex;align-items:center;gap:6px;margin-bottom:2px"><span class="lt">${t.cat}</span><span class="bdg ${t.tipo==='egreso'?'bc':'bt'}">${t.tipo}</span></div>${t.nota?`<div class="ls">${t.nota}</div>`:''}<div class="ls">${fd(t.fecha)}</div></div><div><div class="lv" style="color:${t.tipo==='ingreso'?'#1D9E75':'#D85A30'}">${t.tipo==='egreso'?'-':''}${f$(t.monto)}</div><button onclick="delT('${t.id}')" style="font-size:11px;color:#E24B4A;background:none;border:none;cursor:pointer;display:block;margin-top:2px;margin-left:auto">Eliminar</button></div></div>`).join('')}</div>`;
+}
+function delT(id){D.trans=D.trans.filter(t=>t.id!==id);save();renderScr();}
+
+// COSTOS
+function sCostos(){
+  const s=window._cs||SAB[0],c=D.costos[s];
+  const ct=(c.qty||0)*(c.cost||0),cb=ct/(D.cfg.bpt||11),mg=D.cfg.pu>0?((D.cfg.pu-cb)/D.cfg.pu*100):0;
+  return`<div style="font-size:15px;font-weight:500;margin-bottom:10px">Costos de producción</div>
+  <div style="margin-bottom:12px"><div style="font-size:12px;color:var(--tx2);margin-bottom:6px">Selecciona el sabor</div><div>${SAB.map(fl=>`<span class="fch${fl===s?' sel':''}" onclick="window._cs='${fl}';renderScr()">${fl}</span>`).join('')}</div></div>
+  <div class="card">
+    <div style="font-size:13px;font-weight:500;margin-bottom:10px">${s}</div>
+    <div class="fld"><div class="flb">Ingrediente principal</div><input value="${c.ing||''}" oninput="D.costos['${s}'].ing=this.value;save()" placeholder="Ej: Esencia de vainilla"></div>
+    <div style="display:flex;gap:8px"><div class="fld" style="flex:1"><div class="flb">Cantidad / tanda</div><input type="number" step=".001" min="0" value="${c.qty||.15}" oninput="D.costos['${s}'].qty=+this.value;save();renderScr()"></div><div class="fld" style="width:88px"><div class="flb">Unidad</div><select onchange="D.costos['${s}'].unit=this.value;save();renderScr()">${['kg','L','g','ml','und','paq'].map(u=>`<option${u===c.unit?' selected':''}>${u}</option>`).join('')}</select></div></div>
+    <div class="fld"><div class="flb">Costo por ${c.unit||'kg'} ($)</div><input type="number" step=".01" min="0" value="${c.cost||0}" oninput="D.costos['${s}'].cost=+this.value;save();renderScr()"></div>
+    <div class="sep"></div>
+    <div class="mrow"><div class="met"><div class="mlb">Costo / tanda</div><div class="mvl" style="font-size:15px">${f$(ct)}</div></div><div class="met"><div class="mlb">Costo / bolo</div><div class="mvl" style="font-size:15px">${f$(cb)}</div></div></div>
+    <div class="mrow"><div class="met"><div class="mlb">Margen unitario</div><div class="mvl" style="font-size:15px;color:${mg>=0?'#1D9E75':'#D85A30'}">${f$(D.cfg.pu-cb)}</div></div><div class="met"><div class="mlb">Margen %</div><div class="mvl" style="font-size:15px;color:${mg>=30?'#1D9E75':mg>=0?'#BA7517':'#D85A30'}">${mg.toFixed(0)}%</div></div></div>
+    <div class="inb"><strong>Precio sugerido ×10 (mayorista):</strong><br>30%: <strong>${f$(cb*10/.7)}</strong> · 40%: <strong>${f$(cb*10/.6)}</strong> · 50%: <strong>${f$(cb*10/.5)}</strong></div>
+  </div>`;
+}
+
+// CLIENTES
+function sCli(){
+  if(selCli!==null&&D.clientes[selCli]){
+    const c=D.clientes[selCli],tot=c.pedidos.reduce((a,p)=>a+p.total,0);
+    return`<button onclick="selCli=null;renderScr()" style="background:none;border:none;color:#534AB7;cursor:pointer;font-size:14px;margin-bottom:12px">← Volver</button>
+    <div class="card" style="margin-bottom:10px"><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div class="av">${c.nombre.charAt(0).toUpperCase()}</div><div><div style="font-size:15px;font-weight:500">${c.nombre}</div><div style="font-size:12px;color:var(--tx2)">${c.tel||'Sin tel.'} · ${c.barrio||'Sin sector'}</div></div></div>
+    <div class="mrow"><div class="met"><div class="mlb">Pedidos</div><div class="mvl">${c.pedidos.length}</div></div><div class="met"><div class="mlb">Total comprado</div><div class="mvl" style="color:#1D9E75">${f$(tot)}</div></div></div>
+    <div style="display:flex;gap:6px"><button class="btn p sm" onclick="cmdItems=[{s:SAB[0],q:1}];openM('pedido',null,${selCli})">+ Nuevo pedido</button><button class="btn od sm" onclick="delCli(${selCli})">Eliminar</button></div></div>
+    <div style="font-size:13px;font-weight:500;margin-bottom:8px">Historial</div>
+    ${c.pedidos.length===0?'<div class="emp">Sin pedidos</div>':[...c.pedidos].reverse().map(p=>`<div class="card"><div class="li" style="border:none;padding:0"><div><div class="lt">${p.desc||p.sab}</div><div class="ls">${p.cant} bolos · ${fd(p.fecha)}</div>${p.nota?`<div class="ls">${p.nota}</div>`:''}</div><div class="lv" style="color:#1D9E75">${f$(p.total)}</div></div></div>`).join('')}`;
+  }
+  return`<div class="rb"><span style="font-size:15px;font-weight:500">Clientes mayoristas</span><button class="btn p sm" onclick="openM('cliente')">+ Cliente</button></div>
+  ${D.clientes.length===0?'<div class="emp" style="padding:60px 0">Sin clientes registrados</div>':D.clientes.map((c,i)=>`<div class="card" style="cursor:pointer" onclick="selCli=${i};renderScr()"><div style="display:flex;align-items:center;justify-content:space-between"><div style="display:flex;align-items:center;gap:10px"><div class="av">${c.nombre.charAt(0).toUpperCase()}</div><div><div style="font-size:14px;font-weight:500">${c.nombre}</div><div style="font-size:11px;color:var(--tx2)">${c.barrio||'Sin sector'} · ${c.pedidos.length} pedido${c.pedidos.length!==1?'s':''}</div></div></div><span style="color:#534AB7;font-size:18px">›</span></div></div>`).join('')}`;
+}
+function delCli(i){if(confirm('¿Eliminar cliente?')){D.clientes.splice(i,1);selCli=null;save();renderScr();}}
+
+// REPORTES
+function sRep(){
+  const tv=sumV(D.ventas),te=D.trans.filter(t=>t.tipo==='egreso').reduce((a,t)=>a+t.monto,0);
+  const topS=SAB.map((s,i)=>{let tot=0;D.ventas.forEach(v=>{if(v.tipo==='comanda'&&v.items)v.items.forEach(it=>{if(it.s===s)tot+=it.q*D.cfg.pu;});else if(v.sab===s)tot+=v.total;});return{s,v:+tot.toFixed(2),c:COL[i]};}).filter(x=>x.v>0).sort((a,b)=>b.v-a.v).slice(0,8);
+  const topSt=SAB.map((s,i)=>({s,v:D.stock[s].d,c:COL[i]})).filter(x=>x.v>0).sort((a,b)=>b.v-a.v).slice(0,8);
+  const mxS=topS.length?Math.max(...topS.map(x=>x.v)):1,mxSt=topSt.length?Math.max(...topSt.map(x=>x.v)):1;
+  const nC=D.ventas.filter(v=>v.tipo==='comanda').length,nU=D.ventas.filter(v=>v.tipo==='unitario').length,nP=D.ventas.filter(v=>v.tipo==='promo').length,nM=D.ventas.filter(v=>v.tipo==='mayorista').length,nT=nC+nU+nP+nM||1;
+  return`<div style="font-size:15px;font-weight:500;margin-bottom:12px">Reportes y gráficas</div>
+  <div class="mrow"><div class="met"><div class="mlb">Total vendido</div><div class="mvl" style="color:#1D9E75">${f$(tv)}</div></div><div class="met"><div class="mlb">Egresos</div><div class="mvl" style="color:#D85A30">${f$(te)}</div></div><div class="met"><div class="mlb">Utilidad</div><div class="mvl" style="color:${tv-te>=0?'#1D9E75':'#D85A30'}">${f$(tv-te)}</div></div></div>
+  <div class="card"><div style="font-size:13px;font-weight:500;margin-bottom:8px">Tipo de venta</div><div style="display:flex;gap:8px;flex-wrap:wrap">${[{l:'Comanda',n:nC,c:'#3B6D11'},{l:'Unitario',n:nU,c:'#534AB7'},{l:'Promo',n:nP,c:'#1D9E75'},{l:'Mayorista',n:nM,c:'#D85A30'}].map(x=>`<div style="display:flex;align-items:center;gap:6px;font-size:12px"><div style="width:26px;height:26px;border-radius:50%;background:${x.c};display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:500;color:#fff">${Math.round(x.n/nT*100)}%</div><div><div style="font-weight:500">${x.l}</div><div style="color:var(--tx2)">${x.n}</div></div></div>`).join('')}</div></div>
+  <div class="card"><div style="font-size:13px;font-weight:500;margin-bottom:8px">Ingresos por sabor ($)</div>${topS.length===0?'<div style="text-align:center;padding:16px;color:var(--tx2);font-size:12px">Sin datos</div>':`<div class="bc2">${topS.map(x=>`<div class="bcl"><div class="blv">${f$(x.v)}</div><div class="br2" style="height:${Math.max(6,Math.round(x.v/mxS*100))}px;background:${x.c}"></div><div class="bla">${x.s}</div></div>`).join('')}</div>`}</div>
+  <div class="card"><div style="font-size:13px;font-weight:500;margin-bottom:8px">Stock disponible</div>${topSt.length===0?'<div style="text-align:center;padding:16px;color:var(--tx2);font-size:12px">Sin stock</div>':`<div class="bc2">${topSt.map(x=>`<div class="bcl"><div class="blv">${x.v}</div><div class="br2" style="height:${Math.max(6,Math.round(x.v/mxSt*100))}px;background:${x.c}"></div><div class="bla">${x.s}</div></div>`).join('')}</div>`}</div>
+  ${D.cierres.length>0?`<div class="card"><div style="font-size:13px;font-weight:500;margin-bottom:8px">Cierres de caja</div>${[...D.cierres].reverse().slice(0,7).map(c=>`<div class="li"><div><div class="lt">${fdl(c.fecha)}</div><div class="ls">${c.nV} ventas</div></div><div style="text-align:right"><div style="font-size:13px;font-weight:500;color:#1D9E75">${f$(c.tv)}</div><div style="font-size:11px;color:${c.ut>=0?'#1D9E75':'#D85A30'}">Util: ${f$(c.ut)}</div></div></div>`).join('')}</div>`:''}`;
+}
+
+// MODALES
+let _m=null;
+function openM(tipo,ex,ci){_m={tipo,ex,ci};if(tipo==='comanda'||tipo==='pedido')cmdItems=[{s:SAB[0],q:1}];renderM();}
+function closeM(){_m=null;$('mr').innerHTML='';renderScr();}
+function renderM(){
+  if(!_m){$('mr').innerHTML='';return;}
+  const{tipo,ex,ci}=_m;
+  const tpls={comanda:['Nueva comanda',tComanda],simple:['Venta simple',tSimple],prod:['Registrar producción',tProd],ajuste:[`Ajustar: ${ex}`,()=>tAjuste(ex)],egreso:['Registrar egreso',()=>tTrans('egreso')],ingreso:['Registrar ingreso',()=>tTrans('ingreso')],cliente:['Nuevo cliente',tCliente],pedido:['Nuevo pedido',()=>tPedido(ci)],cierre:['Cerrar caja del día',tCierre],cfg:['Configuración',tCfg]};
+  const[tit,fn]=tpls[tipo]||['',''];
+  $('mr').innerHTML=`<div class="ov" onclick="if(event.target===this)closeM()"><div class="sh"><div class="shh"><div class="sht">${tit}</div><button class="xb" onclick="closeM()">×</button></div>${fn()}</div></div>`;
+}
+
+// COMANDA
+function tComanda(){
+  const items=cmdItems.map((it,i)=>`<div class="ci"><select onchange="cmdItems[${i}].s=this.value;updCT()">${SAB.map(s=>`<option${s===it.s?' selected':''}>${s}</option>`).join('')}</select><input type="number" min="1" value="${it.q}" oninput="cmdItems[${i}].q=+this.value||1;updCT()"><button onclick="rmCI(${i})">×</button></div>`).join('');
+  const tot=cmdItems.reduce((a,it)=>a+(it.q*D.cfg.pu),0);
+  return`<div class="fld"><div class="flb">Cliente / mesa (opcional)</div><input id="mc" placeholder="Ej: Emilio, Mesa 3..."></div>
+  <div style="font-size:12px;color:var(--tx2);margin-bottom:6px">Productos del pedido</div>
+  <div id="citems">${items}</div>
+  <button class="btn op fw" style="margin-bottom:10px" onclick="addCI()">+ Agregar sabor</button>
+  <div class="fld"><div class="flb">Tipo de precio</div><select id="mpt" onchange="updCT()"><option value="u">Unitario (${f$(D.cfg.pu)} c/u)</option><option value="pr">Promo 3×${f$(D.cfg.pp)}</option><option value="lib">Precio libre</option></select></div>
+  <div id="libw" style="display:none" class="fld"><div class="flb">Precio total ($)</div><input type="number" id="mpl" step=".01" min="0" placeholder="0.00" oninput="updCT()"></div>
+  <div class="inb" id="ctot">Total estimado: <strong>${f$(tot)}</strong></div>
+  <div class="fld"><div class="flb">Fecha</div><input type="date" id="mf" value="${hoy()}"></div>
+  <button class="btn p fw" onclick="subComanda()">Registrar comanda</button>`;
+}
+function addCI(){cmdItems.push({s:SAB[0],q:1});renderM();}
+function rmCI(i){if(cmdItems.length===1)return;cmdItems.splice(i,1);renderM();}
+function updCT(){
+  const pt=$('mpt')?.value,lw=$('libw');
+  if(lw)lw.style.display=pt==='lib'?'block':'none';
+  const tb=cmdItems.reduce((a,it)=>a+(+it.q||0),0);
+  let tot=pt==='pr'?Math.floor(tb/3)*D.cfg.pp+(tb%3)*D.cfg.pu:pt==='lib'?+($('mpl')?.value||0):cmdItems.reduce((a,it)=>a+(+it.q||0)*D.cfg.pu,0);
+  const el=$('ctot');if(el)el.innerHTML=`Total: <strong>${f$(tot)}</strong>`;
+}
+function subComanda(){
+  const cli=$('mc')?.value.trim()||'',pt=$('mpt')?.value||'u',fecha=$('mf')?.value||hoy();
+  const tb=cmdItems.reduce((a,it)=>a+(+it.q||0),0);
+  let tot=pt==='pr'?+(Math.floor(tb/3)*D.cfg.pp+(tb%3)*D.cfg.pu).toFixed(2):pt==='lib'?+($('mpl')?.value||0):+(cmdItems.reduce((a,it)=>a+(+it.q||0)*D.cfg.pu,0)).toFixed(2);
+  const items=cmdItems.map(it=>({s:it.s,q:+it.q||1}));
+  D.ventas.push({id:uid(),tipo:'comanda',cliente:cli,items,cant:tb,promos:0,total:tot,fecha,sab:items[0].s});
+  items.forEach(it=>{D.stock[it.s].d=Math.max(0,(D.stock[it.s].d||0)-it.q);});
+  save();closeM();
+}
+
+// VENTA SIMPLE
+function tSimple(){
+  return`<div class="fld"><div class="flb">Sabor</div><select id="ms">${SAB.map(s=>`<option>${s}</option>`).join('')}</select></div>
+  <div class="fld"><div class="flb">Tipo</div><select id="mt" onchange="rVE()"><option value="u">Unitario — ${f$(D.cfg.pu)}/bolo</option><option value="pr">Promo 3×${f$(D.cfg.pp)}</option><option value="may">Mayorista (precio libre)</option></select></div>
+  <div id="ve"></div><div id="vp" class="inb"></div>
+  <div class="fld"><div class="flb">Fecha</div><input type="date" id="mf" value="${hoy()}"></div>
+  <button class="btn p fw" onclick="subSimple()">Guardar venta</button>`;
+}
+function rVE(){
+  const t=$('mt')?.value;if(!t)return;
+  let h='';
+  if(t==='u')h=`<div class="fld"><div class="flb">Cantidad</div><input type="number" id="mc2" min="1" value="1" oninput="uVP()"></div>`;
+  else if(t==='pr')h=`<div class="fld"><div class="flb">Grupos de 3</div><input type="number" id="mp2" min="1" value="1" oninput="uVP()"></div>`;
+  else h=`<div class="fld"><div class="flb">Cantidad</div><input type="number" id="mc2" min="1" value="10" oninput="uVP()"></div><div class="fld"><div class="flb">Precio total ($)</div><input type="number" id="mpr" step=".01" min="0" value="0" oninput="uVP()"></div><div class="fld"><div class="flb">Cliente</div><input id="mcli" placeholder="Opcional"></div>`;
+  $('ve').innerHTML=h;uVP();
+}
+function uVP(){
+  const t=$('mt')?.value;let tot=0,det='';
+  if(t==='u'){const c=+($('mc2')?.value||1);tot=+(c*D.cfg.pu).toFixed(2);det=`${c} bolo${c!==1?'s':''} ×${f$(D.cfg.pu)}`;}
+  else if(t==='pr'){const p=+($('mp2')?.value||1);tot=+(p*D.cfg.pp).toFixed(2);det=`${p} promo ×${f$(D.cfg.pp)}`;}
+  else{tot=+($('mpr')?.value||0);det=`${$('mc2')?.value||0} bolos`;}
+  const el=$('vp');if(el)el.innerHTML=`${det} <strong>→ ${f$(tot)}</strong>`;
+}
+function subSimple(){
+  const t=$('mt').value,sab=$('ms').value,fecha=$('mf').value;
+  let tot,cant,promos=0;
+  if(t==='u'){cant=+$('mc2').value;tot=+(cant*D.cfg.pu).toFixed(2);}
+  else if(t==='pr'){promos=+$('mp2').value;cant=promos*3;tot=+(promos*D.cfg.pp).toFixed(2);}
+  else{cant=+$('mc2').value;tot=+($('mpr')?.value||0);}
+  const cli=t==='may'?($('mcli')?.value||''):'';
+  D.ventas.push({id:uid(),sab,tipo:t==='u'?'unitario':t==='pr'?'promo':'mayorista',cant,promos,total:tot,fecha,cliente:cli,items:[{s:sab,q:cant}]});
+  D.stock[sab].d=Math.max(0,D.stock[sab].d-cant);
+  save();closeM();
+}
+
+// PRODUCCION
+function tProd(){
+  return`<div class="fld"><div class="flb">Sabor</div><select id="ms">${SAB.map(s=>`<option>${s}</option>`).join('')}</select></div>
+  <div class="fld"><div class="flb">Número de tandas</div><input type="number" id="mtn" min="1" value="1" oninput="$('pi').textContent='≈ '+(+this.value||1)*${D.cfg.bpt}+' bolos'"></div>
+  <div class="inb" id="pi">≈ ${D.cfg.bpt} bolos (${D.cfg.bpt} bolos/tanda)</div>
+  <div class="fld"><div class="flb">Fecha</div><input type="date" id="mf" value="${hoy()}"></div>
+  <button class="btn p fw" onclick="const s=$('ms').value,t=+$('mtn').value,p=t*${D.cfg.bpt};D.stock[s].d+=p;D.stock[s].p+=p;save();closeM()">Registrar producción</button>`;
+}
+
+// AJUSTE
+function tAjuste(sab){return`<div class="inb">Stock actual: <strong>${D.stock[sab].d} bolos</strong></div><div class="fld"><div class="flb">Nuevo stock disponible</div><input type="number" id="md" min="0" value="${D.stock[sab].d}"></div><button class="btn p fw" onclick="D.stock['${sab}'].d=+$('md').value;save();closeM()">Actualizar</button>`;}
+
+// TRANS
+function tTrans(tipo){
+  const cats=tipo==='egreso'?CEG:CIN;
+  return`<div class="fld"><div class="flb">Categoría</div><select id="mcat">${cats.map(c=>`<option>${c}</option>`).join('')}</select></div>
+  <div class="fld"><div class="flb">Monto ($)</div><input type="number" id="mmo" step=".01" min="0" placeholder="0.00"></div>
+  <div class="fld"><div class="flb">Nota (opcional)</div><input id="mno" placeholder="Descripción..."></div>
+  <div class="fld"><div class="flb">Fecha</div><input type="date" id="mf" value="${hoy()}"></div>
+  <button class="btn ${tipo==='egreso'?'d':'s'} fw" onclick="D.trans.push({id:uid(),tipo:'${tipo}',cat:$('mcat').value,monto:+($('mmo').value||0),nota:$('mno').value,fecha:$('mf').value});save();closeM()">Guardar ${tipo}</button>`;
+}
+
+// CLIENTE
+function tCliente(){return`<div class="fld"><div class="flb">Nombre completo</div><input id="mn" placeholder="Ej: María González"></div><div class="fld"><div class="flb">Teléfono</div><input id="mt2" placeholder="0999..."></div><div class="fld"><div class="flb">Barrio / Sector</div><input id="mb" placeholder="Ej: Barrio La Paz"></div><button class="btn p fw" onclick="const n=$('mn').value.trim();if(!n)return alert('Ingresa un nombre');D.clientes.push({nombre:n,tel:$('mt2').value,barrio:$('mb').value,pedidos:[]});save();closeM()">Guardar cliente</button>`;}
+
+// PEDIDO (cliente mayorista con múltiples sabores)
+function tPedido(ci){
+  const items=cmdItems.map((it,i)=>`<div class="ci"><select onchange="cmdItems[${i}].s=this.value">${SAB.map(s=>`<option${s===it.s?' selected':''}>${s}</option>`).join('')}</select><input type="number" min="1" value="${it.q}" oninput="cmdItems[${i}].q=+this.value||1" style="width:55px"><button onclick="cmdItems.splice(${i},1);renderM()">×</button></div>`).join('');
+  return`${items}<button class="btn op fw" style="margin-bottom:10px" onclick="cmdItems.push({s:SAB[0],q:1});renderM()">+ Agregar sabor</button>
+  <div class="fld"><div class="flb">Precio total pactado ($)</div><input type="number" id="mpr" step=".01" min="0" placeholder="0.00"></div>
+  <div class="fld"><div class="flb">Nota (opcional)</div><input id="mno" placeholder="Sabores variados, próxima entrega..."></div>
+  <button class="btn p fw" onclick="subPedido(${ci})">Registrar pedido</button>`;
+}
+function subPedido(ci){
+  const tot=+($('mpr')?.value||0),nota=$('mno')?.value||'',cant=cmdItems.reduce((a,it)=>a+(+it.q||0),0);
+  const desc=cmdItems.map(it=>`${it.q} ${it.s}`).join(', ');
+  D.clientes[ci].pedidos.push({desc,sab:cmdItems[0].s,cant,total:tot,nota,fecha:hoy()});
+  D.ventas.push({id:uid(),tipo:'comanda',cliente:D.clientes[ci].nombre,items:cmdItems.map(it=>({s:it.s,q:+it.q})),cant,promos:0,total:tot,fecha:hoy(),sab:cmdItems[0].s});
+  cmdItems.forEach(it=>{D.stock[it.s].d=Math.max(0,(D.stock[it.s].d||0)-it.q);});
+  save();selCli=ci;closeM();
+}
+
+// CIERRE DE CAJA
+function tCierre(){
+  const h=hoy(),vh=vdDia(h),tv=sumV(vh),te=egDia(h),ti=inDia(h),ut=tv+ti-te;
+  return`<div class="inb" style="background:#FAEEDA;border:1px solid #FAC775"><strong>Resumen del día ${fdl(h)}</strong></div>
+  <div class="mrow"><div class="met"><div class="mlb">Ventas del día</div><div class="mvl" style="color:#1D9E75">${f$(tv)}</div><div class="msb">${vh.length} registros</div></div><div class="met"><div class="mlb">Egresos</div><div class="mvl" style="color:#D85A30">${f$(te)}</div></div></div>
+  <div class="card" style="margin-bottom:12px"><div style="font-size:12px;color:var(--tx2)">Utilidad del día</div><div style="font-size:24px;font-weight:500;color:${ut>=0?'#1D9E75':'#D85A30'};margin-top:4px">${f$(ut)}</div></div>
+  <div class="inb">Al cerrar se guardará el resumen en el historial. Mañana podrás abrir una nueva caja.</div>
+  <button class="btn d fw" onclick="D.cierres.push({id:uid(),fecha:'${h}',nV:${vh.length},tv:${tv},te:${te},ti:${ti},ut:${ut}});D.caja=null;save();closeM()">Confirmar cierre de caja</button>
+  <button class="btn op fw" onclick="closeM()">Cancelar</button>`;
+}
+
+// CONFIG
+function openCfg(){_m={tipo:'cfg'};renderM();}
+function tCfg(){
+  return`<div class="fld"><div class="flb">Precio unitario ($)</div><input type="number" id="cpu" step=".01" value="${D.cfg.pu}"></div>
+  <div class="fld"><div class="flb">Precio promo 3×($)</div><input type="number" id="cpp" step=".01" value="${D.cfg.pp}"></div>
+  <div class="fld"><div class="flb">Bolos por tanda</div><input type="number" id="cbp" value="${D.cfg.bpt}"></div>
+  <button class="btn p fw" onclick="D.cfg={pu:+$('cpu').value,pp:+$('cpp').value,bpt:+$('cbp').value};save();closeM()">Guardar</button>
+  <div class="sep"></div>
+  <button class="btn op fw" onclick="expCSV()">Exportar ventas (CSV)</button>
+  <button class="btn op fw" style="margin-top:0" onclick="expT()">Exportar transacciones (CSV)</button>
+  <button class="btn op fw" style="margin-top:0" onclick="expC()">Exportar cierres (CSV)</button>
+  <div class="sep"></div>
+  <div class="inb">${D.ventas.length} ventas · ${D.trans.length} transacciones · ${D.clientes.length} clientes · ${D.cierres.length} cierres</div>
+  <button class="btn od fw" onclick="if(confirm('¿Borrar todos los datos?')){D=defD();save();closeM();}">Restablecer datos</button>`;
+}
+function expCSV(){const r=[['Fecha','Cliente','Tipo','Detalle','Bolos','Total'],...D.ventas.map(v=>[v.fecha,v.cliente||'',v.tipo,vl(v),v.cant,v.total])];dl(r.map(x=>x.join(',')).join('\n'),'ventas.csv');}
+function expT(){const r=[['Fecha','Tipo','Cat','Monto','Nota'],...D.trans.map(t=>[t.fecha,t.tipo,t.cat,t.monto,t.nota||''])];dl(r.map(x=>x.join(',')).join('\n'),'transacciones.csv');}
+function expC(){const r=[['Fecha','Ventas','Egresos','Utilidad','N'],...D.cierres.map(c=>[c.fecha,c.tv,c.te,c.ut,c.nV])];dl(r.map(x=>x.join(',')).join('\n'),'cierres.csv');}
+function dl(csv,name){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download=name;a.click();}
+
+loadData();
+</script>
+</body>
+</html>
