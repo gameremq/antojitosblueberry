@@ -1,8 +1,14 @@
 {
   "name": "Antojitos Blueberry",
-  "short_name": "Blueberry",
-  "start_url": "index.html",
+  "short_name": "Antojitos BB",
+  "description": "Panel de gestión para Antojitos Blueberry",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#534AB7"
+  "background_color": "#534AB7",
+  "theme_color": "#534AB7",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
 }
