@@ -1,4 +1,4 @@
-const CACHE = 'ab-v1';
+const CACHE = 'ab-v2'; // Versión actualizada
 const FILES = ['/', '/index.html', '/manifest.json'];
 
 self.addEventListener('install', e => {
