@@ -20,7 +20,8 @@ input:focus,select:focus{outline:none;border-color:#534AB7}
 button{cursor:pointer;font-family:inherit}
 .app{max-width:500px;margin:0 auto}
 .hdr{background:#534AB7;color:#fff;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;border-radius:12px 12px 0 0}
-.hdr-t{font-size:16px;font-weight:500}.hdr-s{font-size:11px;opacity:.7;margin-top:1px}
+.hdr-t{font-size:16px;font-weight:500}
+.hdr-s{font-size:11px;opacity:.7;margin-top:1px}
 .hdr-btn{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:8px;padding:5px 12px;font-size:12px}
 .tabs{display:flex;background:var(--bg1);border-bottom:0.5px solid var(--bd1);overflow-x:auto;scrollbar-width:none}
 .tabs::-webkit-scrollbar{display:none}
@@ -62,7 +63,8 @@ button{cursor:pointer;font-family:inherit}
 .ftab button.on{background:#534AB7;color:#fff;border-color:#534AB7;font-weight:500}
 .est-btn{padding:8px 10px;border-radius:8px;font-size:12px;font-weight:500;border:1px solid;cursor:pointer;flex:1;text-align:center}
 .pago-btn{padding:8px 10px;border-radius:8px;font-size:12px;font-weight:500;border:1px solid;cursor:pointer;flex:1;text-align:center}
-.fld{margin-bottom:11px}.flb{font-size:12px;color:var(--tx2);margin-bottom:4px}
+.fld{margin-bottom:11px}
+.flb{font-size:12px;color:var(--tx2);margin-bottom:4px}
 .rb{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
 .li{display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:0.5px solid var(--bd1)}
 .li:last-child{border-bottom:none}
@@ -71,10 +73,10 @@ button{cursor:pointer;font-family:inherit}
 .lv{font-size:14px;font-weight:500;text-align:right;flex-shrink:0;margin-left:10px}
 .emp{text-align:center;padding:40px 0;color:var(--tx2);font-size:13px}
 .inb{background:var(--bg2);border-radius:8px;padding:10px 12px;font-size:12px;color:var(--tx2);margin-bottom:12px;line-height:1.6}
-.pb{height:4px;background:var(--bd1);border-radius:2px;margin-top:4px;overflow:hidden}
+.pb{height:4px;background:var(--bd1);border-radius:2px;margin-top:6px;overflow:hidden}
 .pf{height:100%;border-radius:2px}
 .ov{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.52);z-index:10;display:flex;align-items:flex-end}
-.sh{background:var(--bg1);border-radius:12px 12px 0 0;padding:16px;width:100%;max-height:90vh;overflow-y:auto}
+.sh{background:var(--bg1);border-radius:12px 12px 0 0;padding:16px;width:100%;max-height:88vh;overflow-y:auto}
 .shh{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
 .sht{font-size:15px;font-weight:500}
 .xb{width:28px;height:28px;border-radius:50%;background:var(--bg2);border:none;font-size:18px;line-height:28px;text-align:center;color:var(--tx2)}
@@ -82,20 +84,19 @@ button{cursor:pointer;font-family:inherit}
 .sep{height:0.5px;background:var(--bd1);margin:10px 0}
 .qg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .ab{padding:10px;border-radius:8px;border:0.5px solid var(--bd2);background:var(--bg2);color:var(--tx1);font-size:12px;font-weight:500;text-align:center;width:100%}
-.bc2{display:flex;align-items:flex-end;gap:4px;height:110px;padding:0 4px}
+.bc2{display:flex;align-items:flex-end;gap:4px;height:120px;padding:0 4px}
 .bcl{display:flex;flex-direction:column;align-items:center;flex:1}
 .br2{width:100%;border-radius:3px 3px 0 0}
 .bla{font-size:9px;color:var(--tx3);margin-top:3px;text-align:center;max-width:40px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .blv{font-size:9px;color:var(--tx2);margin-bottom:2px}
 .fch{display:inline-block;padding:4px 10px;font-size:12px;border-radius:6px;border:1px solid var(--bd1);margin:3px;cursor:pointer;background:var(--bg2);color:var(--tx2)}
 .fch.sel{background:#534AB7;color:#fff;border-color:#534AB7}
-/* Comanda item row */
-.ci{display:grid;grid-template-columns:1fr 48px 52px 36px;gap:5px;align-items:center;padding:7px;background:var(--bg2);border-radius:8px;margin-bottom:6px}
+.ci{display:flex;align-items:center;gap:6px;padding:7px;background:var(--bg2);border-radius:8px;margin-bottom:6px}
 .ci.sin-stock{border:1px solid #E24B4A}
-.ci select{font-size:12px;padding:5px 6px}
-.ci input[type=number]{font-size:12px;padding:5px 6px;text-align:center}
-.ci .del{background:none;border:none;color:#E24B4A;font-size:20px;padding:0;line-height:1;text-align:center}
-.ci-meta{font-size:10px;color:var(--tx3);padding:2px 0 4px;grid-column:1/-1;display:flex;gap:8px}
+.ci select{flex:1;font-size:12px;padding:5px 7px;min-width:0}
+.ci input[type=number]{width:52px;flex-shrink:0;font-size:12px;padding:5px 6px;text-align:center}
+.ci .ci-info{font-size:10px;color:var(--tx3);min-width:44px;text-align:right;flex-shrink:0;line-height:1.3}
+.ci .del{flex-shrink:0;background:none;border:none;color:#E24B4A;font-size:20px;padding:0 2px;line-height:1}
 .cajav{background:#E1F5EE;border:1px solid #5DCAA5;border-radius:10px;padding:12px 14px;margin-bottom:10px}
 .cajac{background:var(--bg2);border:0.5px solid var(--bd1);border-radius:10px;padding:12px 14px;margin-bottom:8px}
 .ptab{display:flex;border:1px solid var(--bd2);border-radius:8px;overflow:hidden;margin-bottom:12px}
@@ -106,49 +107,47 @@ button{cursor:pointer;font-family:inherit}
 .errbx{background:#FCEBEB;border:1px solid #F09595;border-radius:8px;padding:10px 12px;margin-bottom:8px;font-size:12px;color:#A32D2D}
 .rl{display:flex;justify-content:space-between;padding:5px 0;border-bottom:0.5px solid var(--bd1);font-size:12px}
 .rl:last-child{border-bottom:none}
-.chk-row{display:flex;align-items:center;gap:10px;padding:7px 0;margin-bottom:4px}
+.chk-row{display:flex;align-items:center;gap:10px;padding:8px 0;margin-bottom:4px}
 .chk-row input[type=checkbox]{width:auto;flex-shrink:0}
 .chk-lbl{font-size:13px;color:var(--tx1);flex:1}
 .chk-sub{font-size:11px;color:var(--tx2);margin-top:1px}
-.precio-tag{display:inline-block;padding:2px 8px;border-radius:5px;font-size:10px;font-weight:600;border:1px solid}
-.precio-25{background:#FFF3E0;color:#E65100;border-color:#FFB74D}
-.precio-50{background:#E8F5E9;color:#1B5E20;border-color:#66BB6A}
-/* Prod split row */
-.prod-split{display:grid;grid-template-columns:1fr 1fr;gap:8px;background:var(--bg2);border-radius:8px;padding:10px;margin-bottom:8px}
-.prod-split-lbl{font-size:11px;color:var(--tx2);margin-bottom:4px}
+.price-opt{display:flex;gap:8px;margin-bottom:8px}
+.price-btn{flex:1;padding:8px;border-radius:8px;border:1px solid var(--bd2);background:var(--bg2);color:var(--tx1);font-size:12px;font-weight:500;cursor:pointer;text-align:center}
+.price-btn.sel{background:#534AB7;color:#fff;border-color:#534AB7}
+.dual-stock{display:flex;gap:6px;margin-top:4px}
+.dual-stock>div{flex:1;font-size:10px;color:var(--tx2);background:var(--bg3);padding:4px 6px;border-radius:4px}
 </style>
 </head>
 <body>
 <div class="app" id="app">
   <div class="hdr">
     <div><div class="hdr-t">Antojitos Blueberry</div><div class="hdr-s" id="hsub">Panel de gestión</div></div>
-    <button class="hdr-btn" onclick="openCfg()">⚙ Configurar</button>
+    <button class="hdr-btn" onclick="openCfg()">Configurar</button>
   </div>
   <div class="tabs" id="tabs"></div>
   <div class="scr" id="scr"></div>
   <div id="mr"></div>
 </div>
 <script>
-// ─── CATEGORÍAS ───────────────────────────────────────────────────────────────
-// Clásica y Especial pueden vender a $0.25 o $0.50 según producción
-// Premium siempre a $0.50
+// ── CATEGORÍAS ────────────────────────────────────────────────────────────────
 const CATS={
-  clasica: {label:'Clásica', precios:[.25,.50], promo:{n:3, p25:.65, p50:1.30}, cls:'cat-clasica'},
-  especial:{label:'Especial',precios:[.25,.50], promo:{n:4, p25:.90, p50:1.75}, cls:'cat-especial'},
-  premium: {label:'Premium', precios:[.50],     promo:null,                      cls:'cat-premium'}
+  clasica: {label:'Clásica', precio:.50, promo:{n:3,precio:1.30}, cls:'cat-clasica', dualPrice:true},
+  especial:{label:'Especial',precio:.50, promo:{n:4,precio:1.75}, cls:'cat-especial', dualPrice:true},
+  premium: {label:'Premium', precio:.50, promo:null,              cls:'cat-premium', dualPrice:false}
 };
 const SAB_CAT={
   'Pay Limón':'especial','Galleta María':'especial','Ronpasa':'especial',
   'Queso':'premium','Cheesecake':'premium'
 };
 const catDe=s=>CATS[SAB_CAT[s]||'clasica'];
-const esPremium=s=>(SAB_CAT[s]||'clasica')==='premium';
-const precioPromo=(s,precio)=>{
-  const cat=catDe(s);if(!cat.promo)return null;
-  return precio===.25?cat.promo.p25:cat.promo.p50;
+const precioDe=(s,precio)=>{
+  const cat=catDe(s);
+  if(!cat.dualPrice)return cat.precio;
+  return precio||.50; // Si tiene dual price, usar el precio pasado o .50 por defecto
 };
+const hasDualPrice=s=>catDe(s).dualPrice;
 
-// ─── CONSTANTES ───────────────────────────────────────────────────────────────
+// ── CONSTANTES ────────────────────────────────────────────────────────────────
 const SAB=['Vainilla','Oreo','Maracuyá','Pay Limón','Fresa','Piña','Coco','Cheesecake','Café','Mango','Galleta María','Banano','Queso','Chocolate','Ronpasa'];
 const COL=['#534AB7','#1D9E75','#D85A30','#BA7517','#E24B4A','#185FA5','#993556','#3B6D11','#854F0B','#0F6E56','#712B13','#633806','#3C3489','#993C1D','#888780'];
 const CEG=['Transporte','Ingredientes','Empaques','Gas/Electricidad','Inversión en stock','Publicidad','Otros gastos'];
@@ -158,26 +157,31 @@ const BT=12,MG=30,LML=240,AML=240;
 const ESTADOS={pedido:{l:'Pedido',cls:'est-pedido'},pendiente:{l:'Pendiente',cls:'est-pendiente'},terminado:{l:'Terminado',cls:'est-terminado'}};
 const PAGOS={efectivo:{l:'Efectivo',cls:'pago-efectivo'},transferencia:{l:'Transferencia',cls:'pago-transferencia'}};
 
-// ─── DATOS ────────────────────────────────────────────────────────────────────
-// stock[s] = {d25:0, d50:0, p:0}
-// d25 = bolos a $0.25 disponibles, d50 = bolos a $0.50 disponibles
-// p = total producidos (histórico)
-function defD(){return{
-  esp:{mkg:1.50,ll:.80,al:0},
-  stock:Object.fromEntries(SAB.map(s=>[s,{d25:0,d50:0,p:0}])),
-  ventas:[],trans:[],clientes:[],cierres:[],caja:null,
-  costos:Object.fromEntries(SAB.map(s=>[s,{ing:'',qty:.05,unit:'kg',costo:0}]))
-};}
-
+// ── DATOS ─────────────────────────────────────────────────────────────────────
+function defD(){
+  const stock={};
+  SAB.forEach(s=>{
+    if(hasDualPrice(s)){
+      stock[s]={d_025:0,d_050:0,p:0}; // Para Clásica/Especial: stock separado por precio
+    } else {
+      stock[s]={d:0,p:0}; // Para Premium: stock único
+    }
+  });
+  return{
+    esp:{mkg:1.50,ll:.80,al:0},
+    stock,
+    ventas:[],trans:[],clientes:[],cierres:[],caja:null,
+    costos:Object.fromEntries(SAB.map(s=>[s,{ing:'',qty:.05,unit:'kg',costo:0}]))
+  };
+}
 let D=defD(),tab='inicio',selCli=null,vFiltro='todos';
 let cTab='base',cSab=SAB[0],calSab=SAB[0],calBolos=12;
 
-// Comanda globals (persisten entre re-renders parciales)
-// CI item: {s:'Vainilla', q:1, precio:0.50}
-let CI=[{s:SAB[0],q:1,precio:.50}];
-let CC='',CPago='',CEst='pedido',CFecha='',CUsarLibre=false,CLibre=0;
+// Estado de la comanda
+let CI=[{s:SAB[0],q:1,precio:.50}]; // Ahora incluye precio por item
+let CC='',CPago='',CEst='pedido',CFecha='',CUsarPromo=false,CUsarLibre=false,CLibre=0;
 
-// ─── HELPERS ──────────────────────────────────────────────────────────────────
+// ── HELPERS ───────────────────────────────────────────────────────────────────
 const uid=()=>Math.random().toString(36).slice(2,9);
 const hoy=()=>new Date().toISOString().slice(0,10);
 const $=id=>document.getElementById(id);
@@ -192,132 +196,205 @@ const sumV=vs=>vs.reduce((a,v)=>a+v.total,0);
 const vdDia=d=>D.ventas.filter(v=>v.fecha===d);
 const egDia=d=>D.trans.filter(t=>t.fecha===d&&t.tipo==='eg').reduce((a,t)=>a+t.monto,0);
 const inDia=d=>D.trans.filter(t=>t.fecha===d&&t.tipo==='in').reduce((a,t)=>a+t.monto,0);
-// Stock total disponible de un sabor (suma d25 + d50)
-const stockD=s=>(D.stock[s]?.d25||0)+(D.stock[s]?.d50||0);
-// Stock al precio dado
-const stockPrecio=(s,precio)=>precio===.25?(D.stock[s]?.d25||0):(D.stock[s]?.d50||0);
 
-// ─── COSTOS ───────────────────────────────────────────────────────────────────
+// ── Stock helper: get total disponible ───────────────────────────────────────
+function stockDisponible(s){
+  const st=D.stock[s];
+  if(!st)return 0;
+  if(hasDualPrice(s))return (st.d_025||0)+(st.d_050||0);
+  return st.d||0;
+}
+
+// ── COSTOS ────────────────────────────────────────────────────────────────────
 function cEspT(){const e=D.esp;return(MG/1000)*(e.mkg||0)+(LML/1000)*(e.ll||0)+(AML/1000)*(e.al||0);}
 function cSabT(s){const c=D.costos[s];return(c.qty||0)*(c.costo||0);}
 function cTanda(s){return cEspT()+cSabT(s);}
 
-// ─── TOTAL COMANDA ────────────────────────────────────────────────────────────
-// Cada item tiene su precio ya definido
-function totAutoItems(items){
-  return+(items.reduce((a,it)=>a+(+it.q||0)*(+it.precio||.50),0)).toFixed(2);
+// ── CÁLCULO DE TOTALES ────────────────────────────────────────────────────────
+function totAuto(items){
+  return+(items.reduce((a,it)=>a+(+it.q||0)*(it.precio||.50),0)).toFixed(2);
 }
-function totLibre(libre){return+(libre||0).toFixed(2);}
-function calcTotal(items,libre,usarLibre){
-  return usarLibre?totLibre(libre):totAutoItems(items);
-}
-function resumenLineas(items){
-  // Agrupar por sabor+precio para mostrar resumen claro
-  const grupos={};
+function totPromo(items){
+  // Agrupar por sabor+precio
+  const groups={};
   items.forEach(it=>{
-    const k=`${it.s}|${it.precio}`;
-    grupos[k]=(grupos[k]||0)+(+it.q||0);
+    const key=`${it.s}_${it.precio||.50}`;
+    if(!groups[key])groups[key]={s:it.s,precio:it.precio||.50,q:0};
+    groups[key].q+=(+it.q||0);
   });
-  return Object.entries(grupos).map(([k,q])=>{
-    const[s,pr]=k.split('|');
-    const subtotal=+(q*(+pr)).toFixed(2);
-    return`${q}× ${s} <span class="precio-tag ${+pr===.25?'precio-25':'precio-50'}">${f$(+pr)}</span> = ${f$(subtotal)}`;
-  }).join('<br>');
+  let total=0;
+  Object.values(groups).forEach(g=>{
+    const cat=catDe(g.s),pr=cat.promo;
+    if(pr&&!hasDualPrice(g.s)){
+      // Premium: promo normal
+      const grupos=Math.floor(g.q/pr.n),resto=g.q%pr.n;
+      total+=grupos*pr.precio+resto*cat.precio;
+    } else if(pr&&hasDualPrice(g.s)){
+      // Clásica/Especial: promos solo para bolos de .50
+      if(g.precio===.50){
+        const grupos=Math.floor(g.q/pr.n),resto=g.q%pr.n;
+        total+=grupos*pr.precio+resto*.50;
+      } else {
+        total+=g.q*.25; // Bolos de .25 sin promo
+      }
+    } else {
+      total+=g.q*g.precio;
+    }
+  });
+  return+total.toFixed(2);
+}
+function hayPromos(items){
+  const byS={};
+  items.forEach(it=>{
+    const key=`${it.s}_${it.precio||.50}`;
+    byS[key]=(byS[key]||0)+(+it.q||0);
+  });
+  return Object.entries(byS).some(([key,q])=>{
+    const[s,precio]=key.split('_');
+    const cat=catDe(s),pr=cat.promo;
+    if(!pr)return false;
+    if(hasDualPrice(s)&&parseFloat(precio)!==.50)return false; // Solo .50 tienen promo
+    return q>=pr.n;
+  });
+}
+function calcTotal(items,usarPromo,libre,usarLibre){
+  if(usarLibre)return+libre.toFixed(2);
+  return usarPromo?totPromo(items):totAuto(items);
+}
+function resumenPrecio(items,usarPromo,libre,usarLibre){
+  if(usarLibre)return`Precio libre: <strong>${f$(libre)}</strong>`;
+  const a=totAuto(items);
+  if(usarPromo){
+    const p=totPromo(items);
+    if(p!==a)return`Con promos: <strong>${f$(p)}</strong> (ahorras ${f$(a-p)})`;
+  }
+  return`Total: <strong>${f$(a)}</strong>`;
 }
 
-// ─── STOCK OPERACIONES ────────────────────────────────────────────────────────
+// ── STOCK ─────────────────────────────────────────────────────────────────────
 function deducirStock(v){
   if(v.stockDeducted)return;
-  (v.items||[{s:v.sab,q:v.cant,precio:v.precio||.50}]).forEach(it=>{
-    const sk=D.stock[it.s];if(!sk)return;
-    const pr=+(it.precio||.50);
-    const q=+it.q||0;
-    if(pr===.25){sk.d25=Math.max(0,sk.d25-q);}
-    else{sk.d50=Math.max(0,sk.d50-q);}
+  const its=v.items&&v.items.length?v.items:[{s:v.sab,q:v.cant,precio:v.precio||.50}];
+  its.forEach(it=>{
+    const st=D.stock[it.s];
+    if(!st)return;
+    const qty=+it.q||0;
+    if(hasDualPrice(it.s)){
+      const precio=it.precio||.50;
+      if(precio===.25){
+        st.d_025=Math.max(0,st.d_025-qty);
+      } else {
+        st.d_050=Math.max(0,st.d_050-qty);
+      }
+    } else {
+      st.d=Math.max(0,st.d-qty);
+    }
   });
   v.stockDeducted=true;
 }
 function restaurarStock(v){
   if(!v.stockDeducted)return;
-  (v.items||[{s:v.sab,q:v.cant,precio:v.precio||.50}]).forEach(it=>{
-    const sk=D.stock[it.s];if(!sk)return;
-    const pr=+(it.precio||.50);
-    if(pr===.25){sk.d25+=(+it.q||0);}
-    else{sk.d50+=(+it.q||0);}
+  const its=v.items&&v.items.length?v.items:[{s:v.sab,q:v.cant,precio:v.precio||.50}];
+  its.forEach(it=>{
+    const st=D.stock[it.s];
+    if(!st)return;
+    const qty=+it.q||0;
+    if(hasDualPrice(it.s)){
+      const precio=it.precio||.50;
+      if(precio===.25){
+        st.d_025+=qty;
+      } else {
+        st.d_050+=qty;
+      }
+    } else {
+      st.d+=qty;
+    }
   });
   v.stockDeducted=false;
 }
 function checkStock(items){
   const needed={};
   items.forEach(it=>{
-    const k=`${it.s}|${+(it.precio||.50)}`;
-    needed[k]=(needed[k]||0)+(+it.q||0);
+    const key=hasDualPrice(it.s)?`${it.s}_${it.precio||.50}`:it.s;
+    needed[key]=(needed[key]||0)+(+it.q||0);
   });
-  return Object.entries(needed).filter(([k,q])=>{
-    const[s,pr]=k.split('|');
-    return stockPrecio(s,+pr)<q;
-  }).map(([k,q])=>{
-    const[s,pr]=k.split('|');
-    return`${s} a ${f$(+pr)} (necesitas ${q}, tienes ${stockPrecio(s,+pr)})`;
+  return Object.entries(needed).filter(([key,q])=>{
+    if(key.includes('_')){
+      const[s,precio]=key.split('_');
+      const st=D.stock[s];
+      const have=parseFloat(precio)===.25?(st?.d_025||0):(st?.d_050||0);
+      return have<q;
+    } else {
+      return (D.stock[key]?.d||0)<q;
+    }
+  }).map(([key,q])=>{
+    if(key.includes('_')){
+      const[s,precio]=key.split('_');
+      const st=D.stock[s];
+      const have=parseFloat(precio)===.25?(st?.d_025||0):(st?.d_050||0);
+      return`${s} de ${f$(parseFloat(precio))} (necesitas ${q}, tienes ${have})`;
+    } else {
+      return`${key} (necesitas ${q}, tienes ${D.stock[key]?.d||0})`;
+    }
   });
 }
 
-// ─── BADGES ───────────────────────────────────────────────────────────────────
+// ── BADGES ────────────────────────────────────────────────────────────────────
 function eBadge(e){const x=ESTADOS[e||'pedido'];return`<span class="bdg ${x.cls}">${x.l}</span>`;}
 function pBadge(p){if(!p)return'';const x=PAGOS[p];return x?`<span class="bdg ${x.cls}" style="margin-left:4px">${x.l}</span>`:'';}
 function catBadge(s){const c=catDe(s);return`<span class="bdg ${c.cls}" style="font-size:10px">${c.label}</span>`;}
-function pTagHtml(pr){return`<span class="precio-tag ${+pr===.25?'precio-25':'precio-50'}">${f$(+pr)}</span>`;}
 
-// ─── DESCRIPCIÓN VENTA ────────────────────────────────────────────────────────
+// ── DESCRIPCIÓN DE VENTA ──────────────────────────────────────────────────────
 function vDesc(v){
-  if(v.tipo==='comanda'){
-    return(v.items||[]).map(it=>`${it.q}× ${it.s} ${f$(+(it.precio||.50))}`).join(', ');
-  }
-  const pr=v.precio||.50;
-  if(v.tipo==='unitario')return`${v.cant}× ${v.sab} ${f$(pr)}`;
-  if(v.tipo==='promo')return`${v.promos} promo · ${v.sab} ${f$(pr)}`;
+  if(v.tipo==='comanda')return(v.items||[]).map(i=>`${i.q} ${i.s}${hasDualPrice(i.s)?' '+f$(i.precio||.50):''}`).join(', ');
+  if(v.tipo==='unitario')return`${v.cant} bolo${v.cant!==1?'s':''} · ${v.sab}${hasDualPrice(v.sab)?' '+f$(v.precio||.50):''}`;
+  if(v.tipo==='promo')return`${v.promos} promo · ${v.sab}`;
   return`${v.cant} bolos mayorista · ${v.sab||''}`;
 }
 
-// ─── STORAGE ──────────────────────────────────────────────────────────────────
+// ── STORAGE ───────────────────────────────────────────────────────────────────
 function load(){
   try{
-    const r=localStorage.getItem('ab_v6');
+    const r=localStorage.getItem('ab_dual_v1');
     if(r){
       const s=JSON.parse(r);
       D={...defD(),...s};
-      // Migrar stock antiguo (d→d50 si no tiene d25/d50)
-      const stDef=defD().stock;
+      // Migrar stock antiguo si existe
       SAB.forEach(sab=>{
-        if(!D.stock[sab])D.stock[sab]={d25:0,d50:0,p:0};
-        if(D.stock[sab].d!==undefined&&D.stock[sab].d50===undefined){
-          D.stock[sab].d50=D.stock[sab].d||0;
-          D.stock[sab].d25=0;
-          delete D.stock[sab].d;
+        if(!D.stock[sab]){
+          if(hasDualPrice(sab))D.stock[sab]={d_025:0,d_050:0,p:0};
+          else D.stock[sab]={d:0,p:0};
         }
-        if(D.stock[sab].d25===undefined)D.stock[sab].d25=0;
-        if(D.stock[sab].d50===undefined)D.stock[sab].d50=0;
       });
-      D.costos={...defD().costos,...(s.costos||{})};
       if(!D.esp)D.esp=defD().esp;
+      if(!D.costos)D.costos=defD().costos;
     }
   }catch(e){}
   ra();
 }
-function save(){try{localStorage.setItem('ab_v6',JSON.stringify(D));}catch(e){}}
+function save(){try{localStorage.setItem('ab_dual_v1',JSON.stringify(D));}catch(e){}}
 
-// ─── RENDER ───────────────────────────────────────────────────────────────────
-function ra(){rTabs();rScr();const h=$('hsub');if(h)h.textContent=cajaOk()?`Caja abierta ${fdl(hoy())} · ${f$(cajaM())}`:'Sin caja abierta';}
+// ── RENDER ────────────────────────────────────────────────────────────────────
+function ra(){rTabs();rScr();const h=$('hsub');if(h)h.textContent=cajaOk()?`Caja abierta: ${fdl(hoy())} (${f$(cajaM())})`:'Sin caja abierta';}
 function rTabs(){$('tabs').innerHTML=TABS.map(t=>`<button class="tab${tab===t.id?' on':''}" onclick="go('${t.id}')">${t.l}</button>`).join('');}
 function go(id){tab=id;selCli=null;ra();}
-function rScr(){const m={inicio:sI,caja:sCaja,stock:sStock,ventas:sVentas,finanzas:sFin,costos:sCostos,clientes:sCli,reportes:sRep};$('scr').innerHTML=(m[tab]||sI)();}
+function rScr(){
+  const m={inicio:sI,caja:sCaja,stock:sStock,ventas:sVentas,finanzas:sFin,costos:sCostos,clientes:sCli,reportes:sRep};
+  $('scr').innerHTML=(m[tab]||sI)();
+}
 
-// ══ INICIO ════════════════════════════════════════════════════════════════════
+// Continúa en siguiente bloque...
+
+// ══════════════════════════════════════════════════════════════════════════════
+// PANTALLAS
+// ══════════════════════════════════════════════════════════════════════════════
+
 function sI(){
   const h=hoy(),cv=cajaOk();
   const vh=vdDia(h),iv=sumV(vh),eh=egDia(h),ih=inDia(h),ut=iv+ih-eh;
-  const td=SAB.reduce((a,s)=>a+stockD(s),0),ag=SAB.filter(s=>stockD(s)===0).length;
-  const bj=SAB.filter(s=>stockD(s)>0&&stockD(s)<4);
+  const td=SAB.reduce((a,s)=>a+stockDisponible(s),0);
+  const ag=SAB.filter(s=>stockDisponible(s)===0).length;
+  const bj=SAB.filter(s=>{const d=stockDisponible(s);return d>0&&d<4;});
   const nPend=D.ventas.filter(v=>(v.estado||'pedido')==='pendiente').length;
   const ban=cv
     ?`<div class="cajav"><div style="display:flex;justify-content:space-between;align-items:center"><div>
@@ -325,9 +402,9 @@ function sI(){
         <div style="font-size:11px;color:#1D9E75">Monto inicial: ${f$(cajaM())}</div></div>
         <button class="btn d sm" onclick="openM('cierre')">Cerrar caja</button></div></div>`
     :`<div style="background:#FCEBEB;border:1px solid #F09595;border-radius:10px;padding:12px 14px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center">
-      <div><div style="font-size:12px;font-weight:500;color:#A32D2D">Sin caja abierta</div>
-      <div style="font-size:11px;color:#E24B4A">Abre la caja para registrar ventas</div></div>
-      <button class="btn p sm" onclick="openM('apertura')">Abrir caja</button></div>`;
+       <div><div style="font-size:12px;font-weight:500;color:#A32D2D">Sin caja abierta</div>
+       <div style="font-size:11px;color:#E24B4A">Abre la caja para registrar ventas</div></div>
+       <button class="btn p sm" onclick="openM('apertura')">Abrir caja</button></div>`;
   return`${ban}
   <div class="mrow">
     <div class="met"><div class="mlb">Stock total</div><div class="mvl" style="color:#534AB7">${td}</div><div class="msb">${ag} agotados</div></div>
@@ -336,33 +413,37 @@ function sI(){
   <div class="mrow">
     <div class="met"><div class="mlb">Ingresos hoy</div><div class="mvl" style="color:#1D9E75">${f$(iv+ih)}</div></div>
     <div class="met"><div class="mlb">Egresos hoy</div><div class="mvl" style="color:#D85A30">${f$(eh)}</div></div>
-    <div class="met"><div class="mlb">Utilidad hoy</div><div class="mvl" style="color:${ut>=0?'#1D9E75':'#D85A30'}">${f$(ut)}</div></div>
+    <div class="met"><div class="mlb">Utilidad</div><div class="mvl" style="color:${ut>=0?'#1D9E75':'#D85A30'}">${f$(ut)}</div></div>
   </div>
   ${nPend>0?`<div style="background:#FCEBEB;border:1px solid #F09595;border-radius:10px;padding:10px 14px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center">
     <div style="font-size:12px;font-weight:500;color:#A32D2D">${nPend} cobro${nPend!==1?'s':''} pendiente${nPend!==1?'s':''}</div>
     <button class="btn sm" style="border-color:#E24B4A;color:#E24B4A;background:transparent" onclick="vFiltro='pendiente';go('ventas')">Ver</button></div>`:''}
-  ${bj.length?`<div class="card" style="border-left:3px solid #BA7517"><div style="font-size:12px;font-weight:500;color:#633806;margin-bottom:6px">Stock bajo (menos de 4)</div>${bj.map(s=>`<span class="bdg ba" style="margin:2px">${s}: ${stockD(s)}</span>`).join('')}</div>`:''}
-  <div class="card"><div style="font-size:13px;font-weight:500;margin-bottom:10px">Acciones rápidas</div>
+  ${bj.length?`<div class="card" style="border-left:3px solid #BA7517">
+    <div style="font-size:12px;font-weight:500;color:#633806;margin-bottom:6px">Stock bajo (menos de 4)</div>
+    ${bj.map(s=>`<span class="bdg ba" style="margin:2px">${s}: ${stockDisponible(s)}</span>`).join('')}</div>`:''}
+  <div class="card">
+    <div style="font-size:13px;font-weight:500;margin-bottom:10px">Acciones rápidas</div>
     <div class="qg">
-      <button class="ab ${cv?'btn p':''}" style="${!cv?'opacity:.4':''}" onclick="${cv?"openM('comanda')":'alert(\"Abre la caja primero\")'}">+ Comanda</button>
-      <button class="ab" style="border:0.5px solid #534AB7;color:#534AB7;${!cv?'opacity:.4':''}" onclick="${cv?"openM('simple')":'alert(\"Abre la caja primero\")'}">+ Venta simple</button>
+      <button class="ab ${cv?'btn p':''}" style="${!cv?'opacity:.4;cursor:default':''}" onclick="${cv?"openM('comanda')":'alert(\"Primero abre la caja\")'}">+ Comanda</button>
+      <button class="ab" style="border:0.5px solid #534AB7;color:#534AB7;${!cv?'opacity:.4;cursor:default':''}" onclick="${cv?"openM('simple')":'alert(\"Primero abre la caja\")'}">+ Venta simple</button>
       <button class="ab" style="border:0.5px solid #D85A30;color:#D85A30" onclick="openM('egreso')">+ Egreso</button>
       <button class="ab" style="border:0.5px solid #1D9E75;color:#1D9E75" onclick="openM('prod')">+ Producción</button>
     </div>
   </div>
-  <div class="card"><div class="rb"><span style="font-size:13px;font-weight:500">Últimas ventas</span><button class="btn op sm" onclick="go('ventas')">Ver todas</button></div>
-    ${D.ventas.length===0?'<div class="emp" style="padding:16px 0">Sin ventas aún</div>'
+  <div class="card">
+    <div class="rb"><span style="font-size:13px;font-weight:500">Últimas ventas</span><button class="btn op sm" onclick="go('ventas')">Ver todas</button></div>
+    ${D.ventas.length===0?'<div class="emp" style="padding:16px 0">Sin ventas registradas</div>'
     :[...D.ventas].reverse().slice(0,5).map(v=>`<div class="li">
       <div style="flex:1">
         ${v.cliente?`<div style="font-size:13px;font-weight:500">${v.cliente}</div>`:''}
         <div class="ls">${vDesc(v)}</div>
         <div style="margin-top:3px">${eBadge(v.estado)}${pBadge(v.pago)}</div>
-      </div><div class="lv" style="color:#1D9E75">${f$(v.total)}</div>
+      </div>
+      <div class="lv" style="color:#1D9E75">${f$(v.total)}</div>
     </div>`).join('')}
   </div>`;
 }
 
-// ══ CAJA ══════════════════════════════════════════════════════════════════════
 function sCaja(){
   const h=hoy(),cv=cajaOk();
   const vh=vdDia(h),iv=sumV(vh),eh=egDia(h),ih=inDia(h),saldo=cajaM()+iv+ih-eh;
@@ -381,7 +462,7 @@ function sCaja(){
     <div style="font-size:12px;color:#E24B4A;margin-bottom:10px">Abre la caja para empezar el día</div>
     <button class="btn p" onclick="openM('apertura')">Abrir caja — ${fdl(h)}</button></div>`}
   <div style="font-size:13px;font-weight:500;margin-bottom:8px">Historial de cierres</div>
-  ${D.cierres.length===0?'<div class="emp" style="padding:20px 0">Sin cierres registrados</div>'
+  ${D.cierres.length===0?'<div class="emp" style="padding:24px 0">Sin cierres registrados</div>'
   :[...D.cierres].reverse().map(c=>`<div class="cajac">
     <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px">
       <div><div style="font-size:13px;font-weight:500">${fdl(c.fecha)}</div>
@@ -396,9 +477,10 @@ function sCaja(){
   </div>`).join('')}`;
 }
 
-// ══ STOCK ═════════════════════════════════════════════════════════════════════
 function sStock(){
-  const td=SAB.reduce((a,s)=>a+stockD(s),0),tp=SAB.reduce((a,s)=>a+(D.stock[s]?.p||0),0),ag=SAB.filter(s=>stockD(s)===0).length;
+  const td=SAB.reduce((a,s)=>a+stockDisponible(s),0);
+  const tp=SAB.reduce((a,s)=>a+D.stock[s].p,0);
+  const ag=SAB.filter(s=>stockDisponible(s)===0).length;
   return`<div class="rb"><span style="font-size:15px;font-weight:500">Inventario</span><button class="btn p sm" onclick="openM('prod')">+ Producción</button></div>
   <div class="mrow">
     <div class="met"><div class="mlb">Disponibles</div><div class="mvl" style="color:#534AB7">${td}</div></div>
@@ -406,26 +488,23 @@ function sStock(){
     <div class="met"><div class="mlb">Agotados</div><div class="mvl" style="color:#D85A30">${ag}</div></div>
   </div>
   ${SAB.map((s,i)=>{
-    const sk=D.stock[s],d25=sk?.d25||0,d50=sk?.d50||0,dt=d25+d50,p=sk?.p||0;
-    const cat=catDe(s),out=dt===0,low=dt>0&&dt<4;
-    const pct=p>0?Math.min(100,Math.round(dt/p*100)):0;
-    const esP=esPremium(s);
+    const st=D.stock[s],disp=stockDisponible(s);
+    const pct=st.p>0?Math.min(100,Math.round(disp/st.p*100)):0;
+    const out=disp===0,low=disp>0&&disp<4,cat=catDe(s);
     return`<div class="card" style="border-left:3px solid ${COL[i]}">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+      <div style="display:flex;justify-content:space-between;align-items:center">
         <div style="flex:1">
           <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;flex-wrap:wrap">
             <span style="font-size:13px;font-weight:500">${s}</span>
-            <span class="bdg ${cat.cls}" style="font-size:10px">${cat.label}</span>
+            ${catBadge(s)}
+            ${cat.promo?`<span style="font-size:10px;color:var(--tx3)">promo ${cat.promo.n}×${f$(cat.promo.precio)}</span>`:'<span style="font-size:10px;color:var(--tx3)">sin promo</span>'}
             ${out?'<span class="bdg br">Agotado</span>':low?'<span class="bdg ba">Bajo</span>':''}
           </div>
-          ${esP
-            ?`<div style="font-size:11px;color:var(--tx2)">${d50} bolos a $0.50 · ${p} producidos</div>`
-            :`<div style="font-size:11px;color:var(--tx2);margin-bottom:3px">
-                ${d25>0?`<span class="precio-tag precio-25" style="margin-right:4px">${d25} a $0.25</span>`:''}
-                ${d50>0?`<span class="precio-tag precio-50">${d50} a $0.50</span>`:''}
-                ${dt===0?'Sin stock':''}
-                &nbsp;<span style="color:var(--tx3)">· ${p} producidos total</span>
-              </div>`}
+          <div style="font-size:11px;color:var(--tx2)">${disp} disponibles · ${st.p} producidos total</div>
+          ${hasDualPrice(s)?`<div class="dual-stock">
+            <div>$0.25: ${st.d_025||0}</div>
+            <div>$0.50: ${st.d_050||0}</div>
+          </div>`:''}
           <div class="pb"><div class="pf" style="width:${pct}%;background:${out?'#E24B4A':low?'#EF9F27':COL[i]}"></div></div>
         </div>
         <button class="btn sm" style="margin-left:8px;border:0.5px solid var(--bd2);background:var(--bg2);color:var(--tx1)" onclick="openM('ajuste','${s}')">Ajustar</button>
@@ -434,41 +513,55 @@ function sStock(){
   }).join('')}`;
 }
 
-// ══ VENTAS ════════════════════════════════════════════════════════════════════
 function sVentas(){
   const filtros=[{k:'todos',l:'Todos'},{k:'pedido',l:'Pedido'},{k:'pendiente',l:'Pendiente'},{k:'terminado',l:'Terminado'}];
-  const all=D.ventas,nPend=all.filter(v=>(v.estado||'pedido')==='pendiente').length;
+  const all=D.ventas;
+  const nPend=all.filter(v=>(v.estado||'pedido')==='pendiente').length;
   const totEf=all.filter(v=>v.pago==='efectivo'&&v.estado==='terminado').reduce((a,v)=>a+v.total,0);
   const totTr=all.filter(v=>v.pago==='transferencia'&&v.estado==='terminado').reduce((a,v)=>a+v.total,0);
   let vs=[...all].reverse();
   if(vFiltro!=='todos')vs=vs.filter(v=>(v.estado||'pedido')===vFiltro);
-  return`<div class="rb"><span style="font-size:15px;font-weight:500">Ventas</span>
-    <div style="display:flex;gap:6px"><button class="btn p sm" onclick="openM('comanda')">+ Comanda</button><button class="btn op sm" onclick="openM('simple')">+ Simple</button></div></div>
+  return`<div class="rb">
+    <span style="font-size:15px;font-weight:500">Ventas</span>
+    <div style="display:flex;gap:6px">
+      <button class="btn p sm" onclick="openM('comanda')">+ Comanda</button>
+      <button class="btn op sm" onclick="openM('simple')">+ Simple</button>
+    </div>
+  </div>
   <div class="mrow">
     <div class="met"><div class="mlb">Efectivo cobrado</div><div class="mvl" style="color:#1D9E75;font-size:15px">${f$(totEf)}</div></div>
     <div class="met"><div class="mlb">Transferencia</div><div class="mvl" style="color:#185FA5;font-size:15px">${f$(totTr)}</div></div>
     <div class="met"><div class="mlb">Pendientes</div><div class="mvl" style="color:#E24B4A">${nPend}</div></div>
   </div>
-  <div class="ftab">${filtros.map(f=>`<button class="${vFiltro===f.k?'on':''}" onclick="vFiltro='${f.k}';rScr()">${f.l}${f.k==='pendiente'&&nPend>0?` (${nPend})`:''}</button>`).join('')}</div>
-  ${vs.length===0?`<div class="emp">Sin ventas${vFiltro!=='todos'?` — "${vFiltro}"`:''}</div>`
+  <div class="ftab">
+    ${filtros.map(f=>`<button class="${vFiltro===f.k?'on':''}" onclick="vFiltro='${f.k}';rScr()">${f.l}${f.k==='pendiente'&&nPend>0?` (${nPend})`:''}</button>`).join('')}
+  </div>
+  ${vs.length===0?`<div class="emp">Sin ventas${vFiltro!=='todos'?` — estado "${vFiltro}"`:''}</div>`
   :vs.map(v=>`<div class="vcard ${v.estado||'pedido'}" onclick="openM('detalle','${v.id}')">
     <div style="display:flex;justify-content:space-between;align-items:flex-start">
       <div style="flex:1">
         ${v.cliente?`<div style="font-size:13px;font-weight:500;margin-bottom:2px">${v.cliente}</div>`:''}
-        <div style="font-size:${v.cliente?'11':'12'}px;color:var(--tx2);margin-bottom:4px">${vDesc(v)}</div>
-        <div style="display:flex;gap:4px;flex-wrap:wrap;align-items:center">${eBadge(v.estado)}${pBadge(v.pago)}<span style="font-size:10px;color:var(--tx3);margin-left:2px">${fd(v.fecha)}</span></div>
+        <div style="font-size:${v.cliente?'11':'13'}px;${v.cliente?'color:var(--tx2);':'font-weight:500;'}margin-bottom:4px">${vDesc(v)}</div>
+        <div style="display:flex;gap:4px;flex-wrap:wrap;align-items:center">
+          ${eBadge(v.estado)}${pBadge(v.pago)}
+          <span style="font-size:10px;color:var(--tx3);margin-left:2px">${fd(v.fecha)}</span>
+        </div>
       </div>
       <div style="font-size:15px;font-weight:500;color:#1D9E75;margin-left:8px;flex-shrink:0">${f$(v.total)}</div>
     </div>
   </div>`).join('')}`;
 }
 
-// ══ FINANZAS ══════════════════════════════════════════════════════════════════
 function sFin(){
   const tv=sumV(D.ventas),te=D.trans.filter(t=>t.tipo==='eg').reduce((a,t)=>a+t.monto,0);
   const ti=D.trans.filter(t=>t.tipo==='in').reduce((a,t)=>a+t.monto,0),ut=tv+ti-te;
-  return`<div class="rb"><span style="font-size:15px;font-weight:500">Finanzas</span>
-    <div style="display:flex;gap:6px"><button class="btn s sm" onclick="openM('ingreso')">+ Ingreso</button><button class="btn d sm" onclick="openM('egreso')">+ Egreso</button></div></div>
+  return`<div class="rb">
+    <span style="font-size:15px;font-weight:500">Finanzas</span>
+    <div style="display:flex;gap:6px">
+      <button class="btn s sm" onclick="openM('ingreso')">+ Ingreso</button>
+      <button class="btn d sm" onclick="openM('egreso')">+ Egreso</button>
+    </div>
+  </div>
   <div class="mrow">
     <div class="met"><div class="mlb">Ventas acum.</div><div class="mvl" style="color:#1D9E75">${f$(tv)}</div></div>
     <div class="met"><div class="mlb">Otros ing.</div><div class="mvl" style="color:#1D9E75">${f$(ti)}</div></div>
@@ -478,7 +571,8 @@ function sFin(){
     <div style="font-size:12px;color:var(--tx2)">Utilidad neta acumulada</div>
     <div style="font-size:26px;font-weight:500;color:${ut>=0?'#1D9E75':'#D85A30'};margin-top:4px">${f$(ut)}</div>
   </div>
-  <div class="card">${[...D.trans].reverse().length===0?'<div class="emp">Sin transacciones</div>'
+  <div class="card">
+    ${[...D.trans].reverse().length===0?'<div class="emp">Sin transacciones</div>'
     :[...D.trans].reverse().map(t=>`<div class="li">
       <div style="flex:1">
         <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px">
@@ -492,19 +586,24 @@ function sFin(){
         <div class="lv" style="color:${t.tipo==='in'?'#1D9E75':'#D85A30'}">${t.tipo==='eg'?'-':''}${f$(t.monto)}</div>
         <button onclick="delT('${t.id}')" style="font-size:11px;color:#E24B4A;background:none;border:none;cursor:pointer;display:block;margin-top:2px;margin-left:auto">Eliminar</button>
       </div>
-    </div>`).join('')}</div>`;
+    </div>`).join('')}
+  </div>`;
 }
 function delT(id){D.trans=D.trans.filter(t=>t.id!==id);save();rScr();}
 
-// ══ COSTOS ════════════════════════════════════════════════════════════════════
 function sCostos(){
   const tabs=['base','sabor','calc'],labels=['Espesante base','Por sabor','Calculadora'];
-  let body=cTab==='base'?sCostBase():cTab==='sabor'?sCostSabor():sCostCalc();
+  let body='';
+  if(cTab==='base')body=sCostBase();
+  else if(cTab==='sabor')body=sCostSabor();
+  else body=sCostCalc();
   return`<div style="font-size:15px;font-weight:500;margin-bottom:10px">Costos de producción</div>
-  <div class="ptab">${tabs.map((t,i)=>`<button class="${cTab===t?'on':''}" onclick="cTab='${t}';rScr()">${labels[i]}</button>`).join('')}</div>${body}`;
+  <div class="ptab">${tabs.map((t,i)=>`<button class="${cTab===t?'on':''}" onclick="cTab='${t}';rScr()">${labels[i]}</button>`).join('')}</div>
+  ${body}`;
 }
 function sCostBase(){
-  const e=D.esp,ct=cEspT(),cM=(MG/1000)*(e.mkg||0),cL=(LML/1000)*(e.ll||0),cA=(AML/1000)*(e.al||0);
+  const e=D.esp,ct=cEspT();
+  const cM=(MG/1000)*(e.mkg||0),cL=(LML/1000)*(e.ll||0),cA=(AML/1000)*(e.al||0);
   return`<div class="card">
     <div style="font-size:13px;font-weight:500;margin-bottom:10px">Receta del espesante base</div>
     <div class="inb">Por tanda de <strong>${BT} bolos de 100ml</strong>:<br>· ${MG}g maicena &nbsp;· ${LML}ml leche &nbsp;· ${AML}ml agua</div>
@@ -520,37 +619,43 @@ function sCostBase(){
   </div>`;
 }
 function sCostSabor(){
-  const s=cSab,c=D.costos[s],ce=cEspT(),cs=(c.qty||0)*(c.costo||0),ct=ce+cs,cb=ct/BT,cat=catDe(s);
-  const mg25=(.25-cb)/.25*100,mg50=(.50-cb)/.50*100;
-  return`<div style="margin-bottom:12px"><div style="font-size:12px;color:var(--tx2);margin-bottom:6px">Selecciona el sabor</div>
-    <div>${SAB.map(fl=>`<span class="fch${fl===s?' sel':''}" onclick="cSab='${fl}';rScr()">${fl}</span>`).join('')}</div></div>
+  const s=cSab,c=D.costos[s];
+  const ce=cEspT(),cs=(c.qty||0)*(c.costo||0),ct=ce+cs,cb=ct/BT;
+  const pvta=.50,mg=pvta>0?((pvta-cb)/pvta*100):0,cat=catDe(s);
+  return`<div style="margin-bottom:12px">
+    <div style="font-size:12px;color:var(--tx2);margin-bottom:6px">Selecciona el sabor</div>
+    <div>${SAB.map(fl=>`<span class="fch${fl===s?' sel':''}" onclick="cSab='${fl}';rScr()">${fl}</span>`).join('')}</div>
+  </div>
   <div class="card">
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
-      <span style="font-size:13px;font-weight:500">${s}</span>${catBadge(s)}
+      <span style="font-size:13px;font-weight:500">${s}</span>
+      ${catBadge(s)}
     </div>
-    <div class="fld"><div class="flb">Ingrediente / esencia</div>
-      <input value="${c.ing||''}" oninput="D.costos['${s}'].ing=this.value;save()" placeholder="Ej: Esencia de vainilla..."></div>
+    <div class="fld"><div class="flb">Ingrediente / esencia del sabor</div>
+      <input value="${c.ing||''}" oninput="D.costos['${s}'].ing=this.value;save()" placeholder="Ej: Esencia de vainilla, cocoa..."></div>
     <div style="display:flex;gap:8px">
-      <div class="fld" style="flex:1"><div class="flb">Cantidad por tanda</div>
+      <div class="fld" style="flex:1"><div class="flb">Cantidad por tanda (${BT} bolos)</div>
         <input type="number" step=".001" min="0" value="${c.qty||.05}" oninput="D.costos['${s}'].qty=+this.value;save();rScr()"></div>
       <div class="fld" style="width:90px"><div class="flb">Unidad</div>
-        <select onchange="D.costos['${s}'].unit=this.value;save();rScr()">${['kg','L','ml','g','und','paq','cc'].map(u=>`<option${u===c.unit?' selected':''}>${u}</option>`).join('')}</select></div>
+        <select onchange="D.costos['${s}'].unit=this.value;save();rScr()">
+          ${['kg','L','ml','g','und','paq','cc'].map(u=>`<option${u===c.unit?' selected':''}>${u}</option>`).join('')}
+        </select></div>
     </div>
     <div class="fld"><div class="flb">Costo por ${c.unit||'kg'} ($)</div>
       <input type="number" step=".01" min="0" value="${c.costo||0}" oninput="D.costos['${s}'].costo=+this.value;save();rScr()"></div>
     <div class="sep"></div>
-    <div class="rl"><span>Espesante / tanda</span><span>${f4(ce)}</span></div>
-    <div class="rl"><span>${c.ing||'Ingrediente'} (${c.qty||0} ${c.unit||'kg'})</span><span>${f4(cs)}</span></div>
+    <div class="rl"><span>Espesante base / tanda</span><span style="color:var(--tx2)">${f4(ce)}</span></div>
+    <div class="rl"><span>${c.ing||'Ingrediente'} (${c.qty||0} ${c.unit||'kg'})</span><span style="color:var(--tx2)">${f4(cs)}</span></div>
     <div class="rl" style="font-weight:500"><span>Costo total / tanda</span><span style="color:#D85A30">${f4(ct)}</span></div>
     <div class="rl" style="font-weight:500"><span>Costo / bolo</span><span style="color:#D85A30">${f4(cb)}</span></div>
     <div class="sep"></div>
-    ${esPremium(s)?`<div class="mrow">
-      <div class="met"><div class="mlb">Precio</div><div class="mvl" style="color:#534AB7">$0.50</div></div>
-      <div class="met"><div class="mlb">Margen</div><div class="mvl" style="color:${mg50>=0?'#1D9E75':'#D85A30'}">${mg50.toFixed(0)}%</div></div>
-    </div>`:`<div class="mrow">
-      <div class="met"><div class="mlb">A $0.25 — Margen</div><div class="mvl" style="color:${mg25>=0?'#1D9E75':'#D85A30'}">${mg25.toFixed(0)}%</div><div class="msb">${f$(Math.max(0,.25-cb))} / bolo</div></div>
-      <div class="met"><div class="mlb">A $0.50 — Margen</div><div class="mvl" style="color:${mg50>=0?'#1D9E75':'#D85A30'}">${mg50.toFixed(0)}%</div><div class="msb">${f$(Math.max(0,.50-cb))} / bolo</div></div>
-    </div>`}
+    <div class="mrow">
+      <div class="met"><div class="mlb">Precio venta $0.50</div><div class="mvl" style="font-size:15px;color:#534AB7">$0.50</div></div>
+      <div class="met"><div class="mlb">Margen</div><div class="mvl" style="font-size:15px;color:${mg>=0?'#1D9E75':'#D85A30'}">${f$(.50-cb)}</div></div>
+      <div class="met"><div class="mlb">Margen %</div><div class="mvl" style="font-size:15px;color:${mg>=30?'#1D9E75':mg>=0?'#BA7517':'#D85A30'}">${mg.toFixed(0)}%</div></div>
+    </div>
+    ${cat.promo?`<div class="inb">Promo disponible: ${cat.promo.n} bolos × ${f$(cat.promo.precio)}</div>`:
+    '<div class="inb">Categoría Premium — sin promo disponible.</div>'}
   </div>`;
 }
 function sCostCalc(){
@@ -561,26 +666,28 @@ function sCostCalc(){
     <div class="fld"><div class="flb">Sabor</div>
       <select onchange="calSab=this.value;rScr()">${SAB.map(fl=>`<option${fl===s?' selected':''}>${fl}</option>`).join('')}</select></div>
     <div class="fld"><div class="flb">¿Cuántos bolos quieres producir?</div>
-      <input type="number" min="1" value="${bolos}" oninput="calBolos=+this.value||12;rScr()"></div>
+      <input type="number" min="1" step="1" value="${bolos}" oninput="calBolos=+this.value||12;rScr()"></div>
     <div class="sep"></div>
-    <div style="font-size:12px;color:var(--tx2);margin-bottom:8px">Necesitas <strong style="color:#534AB7">${tandas} tanda${tandas!==1?'s':''}</strong> → ${tandas*BT} bolos${tandas*BT-bolos>0?`, sobran ${tandas*BT-bolos}`:''}</div>
+    <div style="font-size:12px;color:var(--tx2);margin-bottom:8px">
+      Necesitas <strong style="color:#534AB7">${tandas} tanda${tandas!==1?'s':''}</strong>
+      → ${tandas*BT} bolos${tandas*BT-bolos>0?`, sobran ${tandas*BT-bolos}`:''}
+    </div>
     <div class="rl"><span>Maicena</span><span style="font-weight:500">${mM}g (${(mM/1000).toFixed(3)}kg)</span></div>
     <div class="rl"><span>Leche</span><span style="font-weight:500">${mL}ml (${(mL/1000).toFixed(2)}L)</span></div>
     <div class="rl"><span>Agua</span><span style="font-weight:500">${mA}ml (${(mA/1000).toFixed(2)}L)</span></div>
     <div class="rl"><span>${c.ing||'Ingrediente'} (${s})</span><span style="font-weight:500">${mS.toFixed(3)} ${c.unit||'kg'}</span></div>
     <div class="sep"></div>
-    <div class="highlight">Costo total: <strong>${f$(ctot)}</strong> · Por bolo: <strong>${f4(ctot/bolos)}</strong></div>
+    <div class="highlight">Costo total: <strong>${f$(ctot)}</strong> &nbsp; Por bolo: <strong>${f4(ctot/bolos)}</strong></div>
   </div>`;
 }
 
-// ══ CLIENTES ══════════════════════════════════════════════════════════════════
 function sCli(){
   if(selCli!==null&&D.clientes[selCli]){
     const c=D.clientes[selCli],tot=c.pedidos.reduce((a,p)=>a+p.total,0);
     return`<button onclick="selCli=null;rScr()" style="background:none;border:none;color:#534AB7;cursor:pointer;font-size:14px;margin-bottom:12px">← Volver</button>
     <div class="card" style="margin-bottom:10px">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-        <div class="av">${c.nombre[0].toUpperCase()}</div>
+        <div class="av">${c.nombre.charAt(0).toUpperCase()}</div>
         <div><div style="font-size:15px;font-weight:500">${c.nombre}</div>
         <div style="font-size:12px;color:var(--tx2)">${c.tel||'Sin tel.'} · ${c.barrio||'Sin sector'}</div></div>
       </div>
@@ -595,57 +702,78 @@ function sCli(){
     </div>
     <div style="font-size:13px;font-weight:500;margin-bottom:8px">Historial</div>
     ${c.pedidos.length===0?'<div class="emp">Sin pedidos</div>'
-    :[...c.pedidos].reverse().map(p=>`<div class="card"><div class="li" style="border:none;padding:0">
-      <div><div class="lt">${p.desc||p.sab}</div><div class="ls">${p.cant} bolos · ${fd(p.fecha)}</div>${p.nota?`<div class="ls">${p.nota}</div>`:''}</div>
-      <div class="lv" style="color:#1D9E75">${f$(p.total)}</div>
-    </div></div>`).join('')}`;
+    :[...c.pedidos].reverse().map(p=>`<div class="card">
+      <div class="li" style="border:none;padding:0">
+        <div><div class="lt">${p.desc||p.sab}</div>
+        <div class="ls">${p.cant} bolos · ${fd(p.fecha)}</div>
+        ${p.nota?`<div class="ls">${p.nota}</div>`:''}</div>
+        <div class="lv" style="color:#1D9E75">${f$(p.total)}</div>
+      </div>
+    </div>`).join('')}`;
   }
   return`<div class="rb"><span style="font-size:15px;font-weight:500">Clientes mayoristas</span><button class="btn p sm" onclick="openM('cliente')">+ Cliente</button></div>
   ${D.clientes.length===0?'<div class="emp" style="padding:60px 0">Sin clientes registrados</div>'
   :D.clientes.map((c,i)=>`<div class="card" style="cursor:pointer" onclick="selCli=${i};rScr()">
     <div style="display:flex;align-items:center;justify-content:space-between">
       <div style="display:flex;align-items:center;gap:10px">
-        <div class="av">${c.nombre[0].toUpperCase()}</div>
+        <div class="av">${c.nombre.charAt(0).toUpperCase()}</div>
         <div><div style="font-size:14px;font-weight:500">${c.nombre}</div>
         <div style="font-size:11px;color:var(--tx2)">${c.barrio||'Sin sector'} · ${c.pedidos.length} pedido${c.pedidos.length!==1?'s':''}</div></div>
-      </div><span style="color:#534AB7;font-size:18px">›</span>
+      </div>
+      <span style="color:#534AB7;font-size:18px">›</span>
     </div>
   </div>`).join('')}`;
 }
 function delCli(i){if(confirm('¿Eliminar este cliente?')){D.clientes.splice(i,1);selCli=null;save();rScr();}}
 
-// ══ REPORTES ══════════════════════════════════════════════════════════════════
 function sRep(){
   const tv=sumV(D.ventas),te=D.trans.filter(t=>t.tipo==='eg').reduce((a,t)=>a+t.monto,0);
   const topS=SAB.map((s,i)=>{
     let tot=0;
     D.ventas.forEach(v=>{
-      (v.items||[{s:v.sab,q:v.cant,precio:v.precio||.50}]).forEach(it=>{if(it.s===s)tot+=(+it.q||0)*(+(it.precio||.50));});
+      if(v.tipo==='comanda'&&v.items){
+        v.items.forEach(it=>{if(it.s===s)tot+=(+it.q||0)*(it.precio||.50);});
+      } else if(v.sab===s){
+        tot+=v.total;
+      }
     });
     return{s,v:+tot.toFixed(2),c:COL[i]};
   }).filter(x=>x.v>0).sort((a,b)=>b.v-a.v).slice(0,8);
-  const topSt=SAB.map((s,i)=>({s,v:stockD(s),c:COL[i]})).filter(x=>x.v>0).sort((a,b)=>b.v-a.v).slice(0,8);
+  const topSt=SAB.map((s,i)=>({s,v:stockDisponible(s),c:COL[i]})).filter(x=>x.v>0).sort((a,b)=>b.v-a.v).slice(0,8);
   const mxS=topS.length?Math.max(...topS.map(x=>x.v)):1,mxSt=topSt.length?Math.max(...topSt.map(x=>x.v)):1;
   const nC=D.ventas.filter(v=>v.tipo==='comanda').length,nU=D.ventas.filter(v=>v.tipo==='unitario').length;
   const nP=D.ventas.filter(v=>v.tipo==='promo').length,nM=D.ventas.filter(v=>v.tipo==='mayorista').length,nT=nC+nU+nP+nM||1;
   const totEf=D.ventas.filter(v=>v.pago==='efectivo'&&v.estado==='terminado').reduce((a,v)=>a+v.total,0);
   const totTr=D.ventas.filter(v=>v.pago==='transferencia'&&v.estado==='terminado').reduce((a,v)=>a+v.total,0);
-  function catTv(k){return D.ventas.reduce((a,v)=>{(v.items||[{s:v.sab,q:v.cant,precio:v.precio||.50}]).forEach(it=>{if((SAB_CAT[it.s]||'clasica')===k)a+=(+it.q||0)*(+(it.precio||.50));});return a;},0);}
-  return`<div style="font-size:15px;font-weight:500;margin-bottom:12px">Reportes</div>
+  function catTv(k){
+    return D.ventas.reduce((acc,v)=>{
+      if(v.tipo==='comanda'&&v.items){
+        v.items.forEach(it=>{if((SAB_CAT[it.s]||'clasica')===k)acc+=(+it.q||0)*(it.precio||.50);});
+      } else if(v.sab&&(SAB_CAT[v.sab]||'clasica')===k){
+        acc+=v.total;
+      }
+      return acc;
+    },0);
+  }
+  return`<div style="font-size:15px;font-weight:500;margin-bottom:12px">Reportes y gráficas</div>
   <div class="mrow">
     <div class="met"><div class="mlb">Total vendido</div><div class="mvl" style="color:#1D9E75">${f$(tv)}</div></div>
-    <div class="met"><div class="mlb">Egresos</div><div class="mvl" style="color:#D85A30">${f$(te)}</div></div>
+    <div class="met"><div class="mlb">Egresos total</div><div class="mvl" style="color:#D85A30">${f$(te)}</div></div>
     <div class="met"><div class="mlb">Utilidad</div><div class="mvl" style="color:${tv-te>=0?'#1D9E75':'#D85A30'}">${f$(tv-te)}</div></div>
   </div>
-  <div class="card"><div style="font-size:13px;font-weight:500;margin-bottom:8px">Cobros terminados</div>
+  <div class="card">
+    <div style="font-size:13px;font-weight:500;margin-bottom:8px">Cobros terminados</div>
     <div class="mrow" style="margin-bottom:0">
       <div class="met"><div class="mlb">Efectivo</div><div class="mvl" style="color:#1D9E75">${f$(totEf)}</div></div>
       <div class="met"><div class="mlb">Transferencia</div><div class="mvl" style="color:#185FA5">${f$(totTr)}</div></div>
     </div>
   </div>
-  <div class="card"><div style="font-size:13px;font-weight:500;margin-bottom:8px">Por categoría</div>
-    ${['clasica','especial','premium'].map(k=>`<div class="rl"><span class="bdg ${CATS[k].cls}">${CATS[k].label}</span><span style="font-weight:500">${f$(catTv(k))}</span></div>`).join('')}</div>
-  <div class="card"><div style="font-size:13px;font-weight:500;margin-bottom:8px">Tipo de venta</div>
+  <div class="card">
+    <div style="font-size:13px;font-weight:500;margin-bottom:8px">Por categoría</div>
+    ${['clasica','especial','premium'].map(k=>`<div class="rl"><span class="bdg ${CATS[k].cls}">${CATS[k].label}</span><span style="font-weight:500">${f$(catTv(k))}</span></div>`).join('')}
+  </div>
+  <div class="card">
+    <div style="font-size:13px;font-weight:500;margin-bottom:8px">Tipo de venta</div>
     <div style="display:flex;gap:8px;flex-wrap:wrap">
       ${[{l:'Comanda',n:nC,c:'#3B6D11'},{l:'Unitario',n:nU,c:'#534AB7'},{l:'Promo',n:nP,c:'#1D9E75'},{l:'Mayorista',n:nM,c:'#D85A30'}].map(x=>`
       <div style="display:flex;align-items:center;gap:6px;font-size:12px">
@@ -654,25 +782,35 @@ function sRep(){
       </div>`).join('')}
     </div>
   </div>
-  <div class="card"><div style="font-size:13px;font-weight:500;margin-bottom:8px">Ingresos por sabor</div>
-    ${topS.length===0?'<div style="text-align:center;padding:16px;color:var(--tx2);font-size:12px">Sin datos</div>'
+  <div class="card">
+    <div style="font-size:13px;font-weight:500;margin-bottom:8px">Ingresos por sabor</div>
+    ${topS.length===0?'<div style="text-align:center;padding:16px;color:var(--tx2);font-size:12px">Sin datos aún</div>'
     :`<div class="bc2">${topS.map(x=>`<div class="bcl"><div class="blv">${f$(x.v)}</div><div class="br2" style="height:${Math.max(6,Math.round(x.v/mxS*100))}px;background:${x.c}"></div><div class="bla">${x.s}</div></div>`).join('')}</div>`}
   </div>
-  <div class="card"><div style="font-size:13px;font-weight:500;margin-bottom:8px">Stock disponible</div>
+  <div class="card">
+    <div style="font-size:13px;font-weight:500;margin-bottom:8px">Stock disponible</div>
     ${topSt.length===0?'<div style="text-align:center;padding:16px;color:var(--tx2);font-size:12px">Sin stock</div>'
     :`<div class="bc2">${topSt.map(x=>`<div class="bcl"><div class="blv">${x.v}</div><div class="br2" style="height:${Math.max(6,Math.round(x.v/mxSt*100))}px;background:${x.c}"></div><div class="bla">${x.s}</div></div>`).join('')}</div>`}
   </div>
-  ${D.cierres.length>0?`<div class="card"><div style="font-size:13px;font-weight:500;margin-bottom:8px">Cierres de caja</div>
-    ${[...D.cierres].reverse().slice(0,7).map(c=>`<div class="li"><div><div class="lt">${fdl(c.fecha)}</div><div class="ls">${c.nV} ventas · Inicio: ${f$(c.mi)}</div></div>
-    <div style="text-align:right"><div style="font-size:13px;font-weight:500;color:#1D9E75">${f$(c.tv)}</div><div style="font-size:11px;color:${c.ut>=0?'#1D9E75':'#D85A30'}">Saldo: ${f$(c.saldo)}</div></div></div>`).join('')}
+  ${D.cierres.length>0?`<div class="card">
+    <div style="font-size:13px;font-weight:500;margin-bottom:8px">Cierres de caja</div>
+    ${[...D.cierres].reverse().slice(0,7).map(c=>`<div class="li">
+      <div><div class="lt">${fdl(c.fecha)}</div><div class="ls">${c.nV} ventas · Inicio: ${f$(c.mi)}</div></div>
+      <div style="text-align:right"><div style="font-size:13px;font-weight:500;color:#1D9E75">${f$(c.tv)}</div>
+      <div style="font-size:11px;color:${c.ut>=0?'#1D9E75':'#D85A30'}">Saldo: ${f$(c.saldo)}</div></div>
+    </div>`).join('')}
   </div>`:''}`;
 }
 
-// ══ MODALES ═══════════════════════════════════════════════════════════════════
+// Continúa en siguiente parte con modales...
+
+// ══════════════════════════════════════════════════════════════════════════════
+// MODALES
+// ══════════════════════════════════════════════════════════════════════════════
 let _m=null;
 function openM(tipo,ex,ci){
   _m={tipo,ex,ci};
-  if(tipo==='comanda'){CI=[{s:SAB[0],q:1,precio:.50}];CC='';CPago='';CEst='pedido';CFecha=hoy();CUsarLibre=false;CLibre=0;}
+  if(tipo==='comanda'){CI=[{s:SAB[0],q:1,precio:.50}];CC='';CPago='';CEst='pedido';CFecha=hoy();CUsarPromo=false;CUsarLibre=false;CLibre=0;}
   if(tipo==='pedido'){CI=[{s:SAB[0],q:1,precio:.50}];}
   rM();
 }
@@ -681,93 +819,132 @@ function rM(){
   if(!_m){$('mr').innerHTML='';return;}
   const{tipo,ex,ci}=_m;
   const mapa={
-    apertura:['Abrir caja',tApertura],comanda:['Nueva comanda',tComanda],
-    simple:['Venta simple',tSimple],detalle:['Detalle de venta',()=>tDetalle(ex)],
-    prod:['Registrar producción',tProd],ajuste:[`Ajustar stock: ${ex}`,()=>tAjuste(ex)],
-    egreso:['Registrar egreso',()=>tTrans('eg','egreso')],ingreso:['Registrar ingreso',()=>tTrans('in','ingreso')],
-    cliente:['Nuevo cliente',tCliente],pedido:['Nuevo pedido',()=>tPedido(ci)],
-    cierre:['Cerrar caja',tCierre],cfg:['Configuración',tCfg]
+    apertura: ['Abrir caja', tApertura],
+    comanda:  ['Nueva comanda', tComanda],
+    simple:   ['Venta simple', tSimple],
+    detalle:  ['Detalle de venta', ()=>tDetalle(ex)],
+    prod:     ['Registrar producción', tProd],
+    ajuste:   [`Ajustar stock: ${ex}`, ()=>tAjuste(ex)],
+    egreso:   ['Registrar egreso', ()=>tTrans('eg','egreso')],
+    ingreso:  ['Registrar ingreso', ()=>tTrans('in','ingreso')],
+    cliente:  ['Nuevo cliente mayorista', tCliente],
+    pedido:   ['Nuevo pedido', ()=>tPedido(ci)],
+    cierre:   ['Cerrar caja del día', tCierre],
+    cfg:      ['Configuración', tCfg]
   };
   const[tit,fn]=mapa[tipo]||['','()=>""'];
   $('mr').innerHTML=`<div class="ov" onclick="if(event.target===this)closeM()">
-    <div class="sh"><div class="shh"><div class="sht">${tit}</div><button class="xb" onclick="closeM()">×</button></div>${fn()}</div></div>`;
+    <div class="sh">
+      <div class="shh"><div class="sht">${tit}</div><button class="xb" onclick="closeM()">×</button></div>
+      ${fn()}
+    </div>
+  </div>`;
 }
 
-// ── Guardar estado formulario comanda ─────────────────────────────────────────
 function saveFormComanda(){
   if($('c-cli'))CC=$('c-cli').value;
   if($('c-est'))CEst=$('c-est').value;
   if($('c-pago'))CPago=$('c-pago').value;
   if($('c-fecha'))CFecha=$('c-fecha').value;
+  if($('c-promo-cb'))CUsarPromo=$('c-promo-cb').checked;
   if($('c-libre-cb'))CUsarLibre=$('c-libre-cb').checked;
   if($('c-lib'))CLibre=+$('c-lib').value||0;
 }
 
-// ── APERTURA ─────────────────────────────────────────────────────────────────
+// ── APERTURA DE CAJA ──────────────────────────────────────────────────────────
 function tApertura(){
   return`<div class="warn">Fecha: <strong>${fdl(hoy())}</strong></div>
-  <div class="fld"><div class="flb">Monto inicial en caja ($)</div>
+  <div class="fld"><div class="flb">Monto con que abres caja ($)</div>
     <input type="number" id="a-mi" step=".01" min="0" placeholder="0.00" value="0"></div>
-  <div class="inb">El efectivo con que empiezas el día. Se suma a ventas para calcular el saldo al cerrar.</div>
+  <div class="inb">El efectivo inicial del día. Se suma a ventas para calcular el saldo al cerrar.</div>
   <button class="btn p fw" onclick="D.caja={fecha:hoy(),monto:+($('a-mi').value||0)};save();closeM()">Abrir caja del día</button>`;
 }
 
 // ── COMANDA ───────────────────────────────────────────────────────────────────
-function onCIQChange(i,val){CI[i].q=+val||1;actualizarResumenComanda();}
-function onCISChange(i,val){saveFormComanda();CI[i].s=val;if(esPremium(val))CI[i].precio=.50;rM();}
-function onCIPChange(i,val){CI[i].precio=+val;actualizarResumenComanda();}
-function agregarCIItem(){saveFormComanda();CI.push({s:SAB[0],q:1,precio:.50});rM();}
-function quitarCIItem(i){if(CI.length<=1)return;saveFormComanda();CI.splice(i,1);rM();}
+function onCIQChange(i,val){
+  CI[i].q=+val||1;
+  actualizarResumenComanda();
+}
+function onCISChange(i,val){
+  saveFormComanda();
+  CI[i].s=val;
+  rM();
+}
+function onCIPChange(i,val){
+  saveFormComanda();
+  CI[i].precio=parseFloat(val);
+  rM();
+}
+function agregarCIItem(){
+  saveFormComanda();
+  CI.push({s:SAB[0],q:1,precio:.50});
+  rM();
+}
+function quitarCIItem(i){
+  if(CI.length<=1)return;
+  saveFormComanda();
+  CI.splice(i,1);
+  rM();
+}
+function onCEstChange(val){
+  CEst=val;
+  actualizarResumenComanda();
+}
 
 function actualizarResumenComanda(){
   const esPend=(CEst==='pendiente');
-  // Errores de stock
-  const sinStock=esPend?[]:CI.filter(it=>stockPrecio(it.s,it.precio)<(+it.q||1)).map(it=>`${it.s} a ${f$(it.precio)}`);
+  const sinStock=esPend?[]:checkStock(CI);
   const errEl=$('c-err');
   if(errEl)errEl.innerHTML=sinStock.length>0
-    ?`<div class="errbx">Sin stock suficiente: ${sinStock.join(', ')}.<br>Cambia el estado a "Pendiente" para omitir.</div>`:'';
-  // Precio libre wrap
-  const libWrap=$('c-lib-wrap');if(libWrap)libWrap.style.display=CUsarLibre?'':'none';
-  // Total
-  const tot=CUsarLibre?CLibre:totAutoItems(CI);
+    ?`<div class="errbx">Sin stock suficiente: ${sinStock.join(', ')}.<br>Cambia el estado a "Pendiente" para omitir la verificación.</div>`:'';
+  
+  CI.forEach((it,i)=>{
+    const infoEl=$('ci-info-'+i);
+    if(infoEl){const cat=catDe(it.s);infoEl.innerHTML=`${cat.label}<br>${f$(it.precio||.50)}`;}
+  });
+  
+  const a=totAuto(CI),p=totPromo(CI),haP=hayPromos(CI)&&p!==a;
+  const promoEl=$('c-promo-wrap');
+  if(promoEl)promoEl.style.display=haP?'':'none';
+  
   const prevEl=$('c-prev');
-  if(prevEl)prevEl.innerHTML=CUsarLibre
-    ?`Precio libre: <strong>${f$(tot)}</strong>`
-    :`${resumenLineas(CI)}<br><strong>Total: ${f$(tot)}</strong>`;
+  if(prevEl)prevEl.innerHTML=resumenPrecio(CI,CUsarPromo,CLibre,CUsarLibre);
+  
+  const libWrap=$('c-lib-wrap');
+  if(libWrap)libWrap.style.display=CUsarLibre?'':'none';
 }
 
 function tComanda(){
   const esPend=(CEst==='pendiente');
-  const sinStockIni=esPend?[]:CI.filter(it=>stockPrecio(it.s,it.precio)<(+it.q||1)).map(it=>`${it.s} a ${f$(it.precio)}`);
-  const tot=CUsarLibre?CLibre:totAutoItems(CI);
+  const sinStockIni=esPend?[]:checkStock(CI);
+  const a=totAuto(CI),p=totPromo(CI),haP=hayPromos(CI)&&p!==a;
   const itemsHtml=CI.map((it,i)=>{
-    const sk=D.stock[it.s]||{d25:0,d50:0},cat=catDe(it.s),esP=esPremium(it.s);
-    const stk=stockPrecio(it.s,it.precio),sinSt=!esPend&&stk<(+it.q||1);
-    const precioOpts=esP
-      ?`<option value="0.5">$0.50</option>`
-      :`<option value="0.25"${it.precio===.25?' selected':''}>$0.25 (${sk.d25||0})</option>
-        <option value="0.5"${it.precio===.50?' selected':''}>$0.50 (${sk.d50||0})</option>`;
+    const stDual=hasDualPrice(it.s);
+    const cat=catDe(it.s);
+    const sinSt=sinStockIni.some(msg=>msg.includes(it.s));
     return`<div class="ci${sinSt?' sin-stock':''}">
       <select onchange="onCISChange(${i},this.value)">
-        ${SAB.map(s=>`<option value="${s}"${s===it.s?' selected':''}>${s}</option>`).join('')}
+        ${SAB.map(s=>`<option value="${s}"${s===it.s?' selected':''}>${s} (${stockDisponible(s)})</option>`).join('')}
       </select>
-      <select onchange="onCIPChange(${i},this.value)" style="${esP?'opacity:.5;pointer-events:none':''}">
-        ${precioOpts}
-      </select>
+      ${stDual?`<select onchange="onCIPChange(${i},this.value)" style="width:70px">
+        <option value=".25"${it.precio===.25?' selected':''}>$0.25</option>
+        <option value=".50"${it.precio===.50?' selected':''}>$0.50</option>
+      </select>`:''}
       <input type="number" min="1" value="${it.q}" oninput="onCIQChange(${i},this.value)">
+      <span class="ci-info" id="ci-info-${i}">${cat.label}<br>${f$(it.precio||.50)}</span>
       <button class="del" onclick="quitarCIItem(${i})">×</button>
     </div>`;
   }).join('');
   return`<div class="fld"><div class="flb">Cliente / mesa (opcional)</div>
     <input id="c-cli" placeholder="Ej: Emilio, Mesa 3..." value="${CC}"></div>
-  <div style="font-size:12px;color:var(--tx2);margin-bottom:4px">Sabor &nbsp;·&nbsp; Precio &nbsp;·&nbsp; Cantidad</div>
+  <div style="font-size:12px;color:var(--tx2);margin-bottom:6px">Productos del pedido</div>
   <div id="c-items">${itemsHtml}</div>
   <button class="btn op fw" style="margin-bottom:10px" onclick="agregarCIItem()">+ Agregar sabor</button>
-  <div id="c-err">${sinStockIni.length>0?`<div class="errbx">Sin stock: ${sinStockIni.join(', ')}.<br>Cambia a "Pendiente" si lo prepararás después.</div>`:''}</div>
+  <div id="c-err">${sinStockIni.length>0?`<div class="errbx">Sin stock suficiente: ${sinStockIni.join(', ')}.<br>Cambia el estado a "Pendiente" para omitir.</div>`:''}</div>
   <div class="fld"><div class="flb">Estado del pedido</div>
-    <select id="c-est" onchange="CEst=this.value;actualizarResumenComanda()">
+    <select id="c-est" onchange="CEst=this.value;onCEstChange(this.value)">
       <option value="pedido"${CEst==='pedido'?' selected':''}>Pedido — descontar stock ahora</option>
-      <option value="pendiente"${CEst==='pendiente'?' selected':''}>Pendiente — en preparación (sin stock)</option>
+      <option value="pendiente"${CEst==='pendiente'?' selected':''}>Pendiente — en preparación (sin descontar)</option>
     </select></div>
   <div class="fld"><div class="flb">Método de pago (si ya canceló)</div>
     <select id="c-pago">
@@ -775,48 +952,61 @@ function tComanda(){
       <option value="efectivo"${CPago==='efectivo'?' selected':''}>Efectivo</option>
       <option value="transferencia"${CPago==='transferencia'?' selected':''}>Transferencia</option>
     </select></div>
+  <div class="sep"></div>
+  <div class="card" style="margin-bottom:8px;padding:8px 12px">
+    <div class="rl" style="font-weight:500"><span>Total sin promo</span><span style="color:#534AB7">${f$(a)}</span></div>
+    ${haP?`<div class="rl" style="font-weight:500"><span>Total con promo</span><span style="color:#1D9E75">${f$(p)} <span style="font-size:10px">(ahorras ${f$(a-p)})</span></span></div>`:''}
+  </div>
+  <div id="c-promo-wrap" style="${haP?'':'display:none'}">
+    <div class="chk-row">
+      <input type="checkbox" id="c-promo-cb" onchange="CUsarPromo=this.checked;actualizarResumenComanda()" ${CUsarPromo?'checked':''}>
+      <div class="chk-lbl"><div>Aplicar promos</div>
+      <div class="chk-sub">Clásica 3×$1.30 · Especial 4×$1.75 (solo $0.50)</div></div>
+    </div>
+  </div>
   <div class="chk-row">
     <input type="checkbox" id="c-libre-cb" onchange="CUsarLibre=this.checked;actualizarResumenComanda()" ${CUsarLibre?'checked':''}>
-    <div class="chk-lbl">Precio libre (mayorista)</div>
+    <div class="chk-lbl">Precio libre</div>
   </div>
   <div class="fld" id="c-lib-wrap" style="${CUsarLibre?'':'display:none'}">
     <input type="number" id="c-lib" step=".01" min="0" value="${CLibre}" oninput="CLibre=+this.value||0;actualizarResumenComanda()" placeholder="0.00">
   </div>
-  <div class="highlight" id="c-prev">${CUsarLibre?`Precio libre: <strong>${f$(tot)}</strong>`:`${resumenLineas(CI)}<br><strong>Total: ${f$(tot)}</strong>`}</div>
+  <div class="highlight" id="c-prev">${resumenPrecio(CI,CUsarPromo,CLibre,CUsarLibre)}</div>
   <div class="fld"><div class="flb">Fecha</div><input type="date" id="c-fecha" value="${CFecha||hoy()}"></div>
   <button class="btn p fw" onclick="subComanda()">Registrar comanda</button>`;
 }
+
 function subComanda(){
   const cli=($('c-cli')?.value||CC).trim();
   const fecha=$('c-fecha')?.value||hoy();
   let estado=$('c-est')?.value||CEst;
   const pago=$('c-pago')?.value||CPago;
   if(pago&&estado==='pedido')estado='pendiente';
-  const items=CI.map(it=>({s:it.s,q:+it.q||1,precio:+(it.precio||.50)}));
+  const items=CI.map(it=>({s:it.s,q:+it.q||1,precio:it.precio||.50}));
   if(estado!=='pendiente'){
     const sin=checkStock(items);
-    if(sin.length>0){alert('Stock insuficiente:\n'+sin.join('\n')+'\n\nCambia el estado a "Pendiente" si lo prepararás después.');return;}
+    if(sin.length>0){alert('Stock insuficiente:\n'+sin.join('\n')+'\n\nCambia el estado a "Pendiente" si aún lo vas a preparar.');return;}
   }
-  const tot=calcTotal(items,CLibre,CUsarLibre);
+  const tot=calcTotal(items,CUsarPromo,CLibre,CUsarLibre);
   const cant=items.reduce((a,it)=>a+it.q,0);
-  const venta={id:uid(),tipo:'comanda',cliente:cli,items,cant,total:tot,fecha,sab:items[0].s,estado,pago,stockDeducted:false};
+  const venta={id:uid(),tipo:'comanda',cliente:cli,items,cant,promos:0,total:tot,fecha,sab:items[0].s,estado,pago,stockDeducted:false};
   if(estado!=='pendiente')deducirStock(venta);
-  D.ventas.push(venta);save();closeM();
+  D.ventas.push(venta);
+  save();closeM();
 }
 
 // ── VENTA SIMPLE ──────────────────────────────────────────────────────────────
 function tSimple(){
-  const s0=SAB[0],cat0=catDe(s0),esP0=esPremium(s0);
-  const precioOpts0=esP0?`<option value="0.5">$0.50</option>`
-    :`<option value="0.25">$0.25 (${D.stock[s0]?.d25||0} disp.)</option><option value="0.5">$0.50 (${D.stock[s0]?.d50||0} disp.)</option>`;
-  return`<div style="display:flex;gap:8px">
-    <div class="fld" style="flex:1"><div class="flb">Sabor</div>
-      <select id="s-sab" onchange="rVE()">
-        ${SAB.map(s=>`<option value="${s}">${s} — ${catDe(s).label} (${stockD(s)} disp.)</option>`).join('')}
-      </select></div>
-    <div class="fld" style="width:110px"><div class="flb">Precio</div>
-      <select id="s-precio" onchange="rVE()">${precioOpts0}</select></div>
-  </div>
+  const sab0=SAB[0],cat0=catDe(sab0);
+  return`<div class="fld"><div class="flb">Sabor</div>
+    <select id="s-sab" onchange="rVE()">
+      ${SAB.map(s=>{const cat=catDe(s);return`<option value="${s}">${s} — ${cat.label} | stock: ${stockDisponible(s)}</option>`;}).join('')}
+    </select></div>
+  ${hasDualPrice(sab0)?`<div class="fld"><div class="flb">Precio por bolo</div>
+    <div class="price-opt">
+      <button class="price-btn sel" id="p-025" onclick="setPrecioSimple(.25)">$0.25</button>
+      <button class="price-btn" id="p-050" onclick="setPrecioSimple(.50)">$0.50</button>
+    </div></div>`:''}
   <div class="fld"><div class="flb">Tipo</div>
     <select id="s-tipo" onchange="rVE()">
       <option value="u">Unitario</option>
@@ -826,7 +1016,7 @@ function tSimple(){
   <div id="s-extra">
     <div class="fld"><div class="flb">Cantidad de bolos</div><input type="number" id="s-cant" min="1" value="1" oninput="uVP()"></div>
   </div>
-  <div id="s-prev" class="inb"></div>
+  <div id="s-prev" class="inb">1 × ${f$(cat0.precio)} → <strong>${f$(cat0.precio)}</strong></div>
   <div class="fld"><div class="flb">Estado</div>
     <select id="s-est">
       <option value="pedido">Pedido — descontar stock</option>
@@ -835,68 +1025,87 @@ function tSimple(){
     </select></div>
   <div class="fld"><div class="flb">Método de pago</div>
     <select id="s-pago">
-      <option value="">Sin definir</option><option value="efectivo">Efectivo</option><option value="transferencia">Transferencia</option>
+      <option value="">Sin definir</option>
+      <option value="efectivo">Efectivo</option>
+      <option value="transferencia">Transferencia</option>
     </select></div>
   <div class="fld"><div class="flb">Fecha</div><input type="date" id="s-fecha" value="${hoy()}"></div>
   <button class="btn p fw" onclick="subSimple()">Guardar venta</button>`;
 }
+let precioSimple=.50;
+function setPrecioSimple(p){
+  precioSimple=p;
+  ['025','050'].forEach(x=>$('p-'+x)?.classList.remove('sel'));
+  $('p-'+(p===.25?'025':'050'))?.classList.add('sel');
+  uVP();
+}
 function getSab(){const el=$('s-sab');return el?el.value:SAB[0];}
-function getSPrecio(){const el=$('s-precio');return el?+(el.value||.50):.50;}
 function rVE(){
-  const sab=getSab(),pr=getSPrecio(),cat=catDe(sab),tipo=$('s-tipo')?.value;
-  const esP=esPremium(sab);
-  // Actualizar opciones de precio al cambiar sabor
-  const prEl=$('s-precio');
-  if(prEl){
-    const d25=D.stock[sab]?.d25||0,d50=D.stock[sab]?.d50||0;
-    prEl.innerHTML=esP
-      ?`<option value="0.5">$0.50</option>`
-      :`<option value="0.25">$0.25 (${d25} disp.)</option><option value="0.5">$0.50 (${d50} disp.)</option>`;
-    prEl.disabled=esP;
-  }
-  const promoDisp=cat.promo;
+  const t=$('s-tipo')?.value,sab=getSab(),cat=catDe(sab),pr=cat.promo;
   let h='';
-  if(tipo==='u'){
+  if(t==='u'){
     h=`<div class="fld"><div class="flb">Cantidad de bolos</div><input type="number" id="s-cant" min="1" value="1" oninput="uVP()"></div>`;
-  } else if(tipo==='pr'){
-    if(!promoDisp){h=`<div class="errbx">La categoría <strong>${cat.label}</strong> no tiene promo disponible.</div>`;$('s-extra').innerHTML=h;uVP();return;}
-    const pp=pr===.25?promoDisp.p25:promoDisp.p50;
-    h=`<div class="fld"><div class="flb">Grupos de ${promoDisp.n} bolos → promo ${f$(pp)}</div><input type="number" id="s-promos" min="1" value="1" oninput="uVP()"></div>`;
+  } else if(t==='pr'){
+    if(!pr){h=`<div class="errbx">La categoría <strong>${cat.label}</strong> (${sab}) no tiene promo disponible.</div>`;$('s-extra').innerHTML=h;return;}
+    h=`<div class="fld"><div class="flb">Grupos de ${pr.n} bolos → promo ${f$(pr.precio)}</div><input type="number" id="s-promos" min="1" value="1" oninput="uVP()"></div>`;
   } else {
     h=`<div class="fld"><div class="flb">Cantidad de bolos</div><input type="number" id="s-cant" min="1" value="10" oninput="uVP()"></div>
-    <div class="fld"><div class="flb">Precio total cobrado ($)</div><input type="number" id="s-monto" step=".01" min="0" value="0" oninput="uVP()"></div>
+    <div class="fld"><div class="flb">Precio total cobrado ($)</div><input type="number" id="s-precio" step=".01" min="0" value="0" oninput="uVP()"></div>
     <div class="fld"><div class="flb">Cliente (opcional)</div><input id="s-cli" placeholder="Nombre del cliente"></div>`;
   }
-  $('s-extra').innerHTML=h;uVP();
+  $('s-extra').innerHTML=h;
+  uVP();
 }
 function uVP(){
-  const tipo=$('s-tipo')?.value,sab=getSab(),pr=getSPrecio(),cat=catDe(sab),promoDisp=cat.promo;
-  const pp=promoDisp?(pr===.25?promoDisp.p25:promoDisp.p50):null;
+  const t=$('s-tipo')?.value,sab=getSab(),cat=catDe(sab),pr=cat.promo;
   let tot=0,det='';
-  if(tipo==='u'){const c=+($('s-cant')?.value||1);tot=+(c*pr).toFixed(2);det=`${c} bolo${c!==1?'s':''} × ${f$(pr)}`;}
-  else if(tipo==='pr'&&pp){const g=+($('s-promos')?.value||1);tot=+(g*pp).toFixed(2);det=`${g} promo${g!==1?'s':''} × ${f$(pp)} = ${g*promoDisp.n} bolos`;}
-  else{tot=+($('s-monto')?.value||0);det=`${$('s-cant')?.value||0} bolos (mayorista)`;}
+  if(t==='u'){
+    const c=+($('s-cant')?.value||1);
+    const precio=hasDualPrice(sab)?precioSimple:.50;
+    tot=+(c*precio).toFixed(2);
+    det=`${c} × ${f$(precio)} (${cat.label})`;
+  } else if(t==='pr'&&pr){
+    const p=+($('s-promos')?.value||1);
+    tot=+(p*pr.precio).toFixed(2);
+    det=`${p} promo${p!==1?'s':''} × ${f$(pr.precio)} = ${p*pr.n} bolos`;
+  } else {
+    tot=+($('s-precio')?.value||0);
+    det=`${$('s-cant')?.value||0} bolos (mayorista)`;
+  }
   const el=$('s-prev');if(el)el.innerHTML=`${det} → <strong>${f$(tot)}</strong>`;
 }
 function subSimple(){
-  const tipo=$('s-tipo').value,sab=getSab(),precio=getSPrecio(),fecha=$('s-fecha')?.value||hoy();
+  const tipo=$('s-tipo').value,sab=getSab(),fecha=$('s-fecha')?.value||hoy();
   let estado=$('s-est')?.value||'pedido',pago=$('s-pago')?.value||'';
-  const cat=catDe(sab),promoDisp=cat.promo;
-  const pp=promoDisp?(precio===.25?promoDisp.p25:promoDisp.p50):null;
+  const cat=catDe(sab),pr=cat.promo;
   if(pago&&estado==='pedido')estado='pendiente';
-  let tot,cant,promos=0;
-  if(tipo==='u'){cant=+($('s-cant')?.value||1);tot=+(cant*precio).toFixed(2);}
-  else if(tipo==='pr'){
-    if(!pp){alert('Este sabor no tiene promo disponible.');return;}
-    promos=+($('s-promos')?.value||1);cant=promos*promoDisp.n;tot=+(promos*pp).toFixed(2);
-  } else {cant=+($('s-cant')?.value||10);tot=+($('s-monto')?.value||0);}
-  const cli=tipo==='may'?($('s-cli')?.value||''):'';
-  if(estado!=='pendiente'&&stockPrecio(sab,precio)<cant){
-    alert(`Stock insuficiente de ${sab} a ${f$(precio)}.\nTienes ${stockPrecio(sab,precio)}, necesitas ${cant}.\nCambia el estado a "Pendiente" si lo prepararás después.`);return;
+  let tot,cant,promos=0,precio=hasDualPrice(sab)?precioSimple:.50;
+  if(tipo==='u'){
+    cant=+($('s-cant')?.value||1);
+    tot=+(cant*precio).toFixed(2);
+  } else if(tipo==='pr'){
+    if(!pr){alert('Este sabor no tiene promo disponible.');return;}
+    promos=+($('s-promos')?.value||1);
+    cant=promos*pr.n;
+    tot=+(promos*pr.precio).toFixed(2);
+    precio=.50; // Las promos solo aplican a .50
+  } else {
+    cant=+($('s-cant')?.value||10);
+    tot=+($('s-precio')?.value||0);
   }
-  const venta={id:uid(),sab,tipo:tipo==='u'?'unitario':tipo==='pr'?'promo':'mayorista',cant,promos,total:tot,fecha,cliente:cli,precio,items:[{s:sab,q:cant,precio}],estado,pago,stockDeducted:false};
+  const cli=tipo==='may'?($('s-cli')?.value||''):'';
+  if(estado!=='pendiente'){
+    const items=[{s:sab,q:cant,precio}];
+    const sin=checkStock(items);
+    if(sin.length>0){
+      alert(`Stock insuficiente:\n${sin.join('\n')}\nCambia el estado a "Pendiente" si aún lo prepararás.`);
+      return;
+    }
+  }
+  const venta={id:uid(),sab,tipo:tipo==='u'?'unitario':tipo==='pr'?'promo':'mayorista',cant,promos,total:tot,fecha,cliente:cli,items:[{s:sab,q:cant,precio}],estado,pago,precio,stockDeducted:false};
   if(estado!=='pendiente')deducirStock(venta);
-  D.ventas.push(venta);save();closeM();
+  D.ventas.push(venta);
+  save();closeM();
 }
 
 // ── DETALLE DE VENTA ──────────────────────────────────────────────────────────
@@ -906,10 +1115,9 @@ function tDetalle(id){
   const est=v.estado||'pedido',pago=v.pago||'';
   return`<div style="margin-bottom:12px">
     ${v.cliente?`<div style="font-size:15px;font-weight:500;margin-bottom:2px">${v.cliente}</div>`:''}
-    <div style="font-size:12px;color:var(--tx2);margin-bottom:6px">${vDesc(v)} · ${fd(v.fecha)}</div>
+    <div style="font-size:${v.cliente?'12':'14'}px;${v.cliente?'color:var(--tx2);':'font-weight:500;'}margin-bottom:6px">${vDesc(v)}</div>
     <div style="font-size:22px;font-weight:500;color:#1D9E75;margin-bottom:8px">${f$(v.total)}</div>
-    <div style="display:flex;gap:4px;flex-wrap:wrap">${eBadge(est)}${pBadge(pago)}
-      <span class="bdg" style="background:var(--bg2);color:var(--tx2);margin-left:4px">${v.stockDeducted?'Stock descontado':'No descontó stock'}</span></div>
+    <div style="display:flex;gap:4px;flex-wrap:wrap">${eBadge(est)}${pBadge(pago)}<span class="bdg" style="background:var(--bg2);color:var(--tx2);margin-left:4px">${v.stockDeducted?'Stock descontado':'No descontó stock'}</span></div>
   </div>
   <div class="sep"></div>
   <div style="font-size:12px;font-weight:500;color:var(--tx2);margin:10px 0 8px">Estado del pedido</div>
@@ -922,97 +1130,114 @@ function tDetalle(id){
   </div>
   <div class="sep"></div>
   <button class="btn od fw" style="margin-top:10px"
-    onclick="if(confirm('¿Eliminar esta venta?\\n${v.stockDeducted?'El stock se repondrá.':'El stock NO se repondrá (no fue descontado).'}')){delV('${v.id}');}">Eliminar venta</button>`;
+    onclick="if(confirm('¿Eliminar esta venta?\\n${v.stockDeducted?'El stock se repondrá automáticamente.':'El stock NO se repondrá (no fue descontado).'}')){delV('${v.id}');}">
+    Eliminar venta
+  </button>`;
 }
 function setEst(id,nuevoEst){
   const v=D.ventas.find(x=>x.id===id);if(!v)return;
   const antEst=v.estado||'pedido';
   if(antEst==='pendiente'&&nuevoEst!=='pendiente'&&!v.stockDeducted){
-    const its=v.items||[{s:v.sab,q:v.cant,precio:v.precio||.50}];
+    const its=v.items&&v.items.length?v.items:[{s:v.sab,q:v.cant,precio:v.precio||.50}];
     const sin=checkStock(its);
-    if(sin.length>0){if(!confirm(`Stock insuficiente:\n${sin.join('\n')}\n\n¿Continuar sin descontar?`))return;}
-    else{deducirStock(v);}
+    if(sin.length>0){
+      if(!confirm(`Stock insuficiente:\n${sin.join('\n')}\n\n¿Continuar sin descontar el stock?`))return;
+    } else {
+      deducirStock(v);
+    }
   }
-  if(nuevoEst==='pendiente'&&antEst!=='pendiente'&&v.stockDeducted)restaurarStock(v);
-  v.estado=nuevoEst;save();rM();rScr();
+  if(nuevoEst==='pendiente'&&antEst!=='pendiente'&&v.stockDeducted){
+    restaurarStock(v);
+  }
+  v.estado=nuevoEst;
+  save();rM();rScr();
 }
-function setPag(id,pago){const v=D.ventas.find(x=>x.id===id);if(!v)return;v.pago=pago;if(pago&&(v.estado||'pedido')==='pedido')v.estado='pendiente';save();rM();rScr();}
-function delV(id){const v=D.ventas.find(x=>x.id===id);if(v&&v.stockDeducted)restaurarStock(v);D.ventas=D.ventas.filter(x=>x.id!==id);save();closeM();}
+function setPag(id,pago){
+  const v=D.ventas.find(x=>x.id===id);if(!v)return;
+  v.pago=pago;
+  if(pago&&(v.estado||'pedido')==='pedido')v.estado='pendiente';
+  save();rM();rScr();
+}
+function delV(id){
+  const v=D.ventas.find(x=>x.id===id);
+  if(v&&v.stockDeducted)restaurarStock(v);
+  D.ventas=D.ventas.filter(x=>x.id!==id);
+  save();closeM();
+}
 
-// ── PRODUCCIÓN (con split $0.25 / $0.50 para Clásica y Especial) ─────────────
+// ── PRODUCCIÓN ────────────────────────────────────────────────────────────────
 function tProd(){
+  const s0=SAB[0];
   return`<div class="fld"><div class="flb">Sabor</div>
-    <select id="p-sab" onchange="updProdInfo()">${SAB.map(s=>`<option value="${s}">${s} — ${catDe(s).label}</option>`).join('')}</select></div>
-  <div id="p-split-wrap">
-    <div class="inb" style="margin-bottom:6px">
-      ¿Cuántos bolos de cada tanda van a <strong>$0.25</strong> y cuántos a <strong>$0.50</strong>?<br>
-      <span style="color:var(--tx3)">Total por tanda: ${BT} bolos. Premium siempre a $0.50.</span>
+    <select id="p-sab" onchange="rProd()">${SAB.map(s=>`<option value="${s}">${s}</option>`).join('')}</select></div>
+  <div id="p-dual">
+    ${hasDualPrice(s0)?`<div class="inb" style="background:#FAEEDA;border:1px solid #FAC775">
+      Este sabor tiene doble precio. Especifica cuántos bolos salieron de cada precio.
     </div>
-    <div class="fld"><div class="flb">Número de tandas</div>
-      <input type="number" id="p-tan" min="1" value="1" oninput="updProdInfo()"></div>
-    <div class="prod-split">
-      <div>
-        <div class="prod-split-lbl">Bolos a <span class="precio-tag precio-25">$0.25</span> por tanda</div>
-        <input type="number" id="p-n25" min="0" max="${BT}" value="0" oninput="updProdInfo()">
-      </div>
-      <div>
-        <div class="prod-split-lbl">Bolos a <span class="precio-tag precio-50">$0.50</span> por tanda</div>
-        <input type="number" id="p-n50" min="0" max="${BT}" value="${BT}" oninput="updProdInfo()">
-      </div>
-    </div>
-    <div class="inb" id="p-inf">→ <strong>${BT}</strong> bolos por tanda (0 a $0.25, ${BT} a $0.50)</div>
+    <div class="fld"><div class="flb">Bolos de $0.25</div>
+      <input type="number" id="p-025" min="0" value="0"></div>
+    <div class="fld"><div class="flb">Bolos de $0.50</div>
+      <input type="number" id="p-050" min="0" value="12"></div>`
+    :`<div class="fld"><div class="flb">Cantidad de bolos producidos</div>
+      <input type="number" id="p-cant" min="1" value="12"></div>`}
   </div>
   <div class="fld"><div class="flb">Fecha</div><input type="date" id="p-fecha" value="${hoy()}"></div>
   <button class="btn p fw" onclick="subProd()">Registrar producción</button>`;
 }
-function updProdInfo(){
-  const sab=$('p-sab')?.value||SAB[0],esP=esPremium(sab);
-  const tan=+($('p-tan')?.value||1);
-  const splitWrap=$('p-split-wrap');
-  if(esP){
-    // Premium: todo a $0.50, ocultar split
-    if($('p-n25')){$('p-n25').value=0;$('p-n25').disabled=true;}
-    if($('p-n50')){$('p-n50').value=BT;$('p-n50').disabled=true;}
-  } else {
-    if($('p-n25'))$('p-n25').disabled=false;
-    if($('p-n50'))$('p-n50').disabled=false;
-  }
-  const n25=+($('p-n25')?.value||0),n50=+($('p-n50')?.value||BT);
-  const tot25=tan*n25,tot50=tan*n50,totBol=tot25+tot50;
-  const inf=$('p-inf');
-  if(inf){
-    if(esP){inf.innerHTML=`→ <strong>${tan*BT}</strong> bolos a <span class="precio-tag precio-50">$0.50</span>`;}
-    else{inf.innerHTML=`→ <strong>${totBol}</strong> bolos totales: <span class="precio-tag precio-25">${tot25} a $0.25</span> + <span class="precio-tag precio-50">${tot50} a $0.50</span>${n25+n50!==BT?` <span style="color:#E24B4A">(suman ${n25+n50}/${BT})</span>`:' ✓'}`;}
-  }
+function rProd(){
+  const s=$('p-sab').value;
+  const isDual=hasDualPrice(s);
+  $('p-dual').innerHTML=isDual
+    ?`<div class="inb" style="background:#FAEEDA;border:1px solid #FAC775">
+      Este sabor tiene doble precio. Especifica cuántos bolos salieron de cada precio.
+    </div>
+    <div class="fld"><div class="flb">Bolos de $0.25</div>
+      <input type="number" id="p-025" min="0" value="0"></div>
+    <div class="fld"><div class="flb">Bolos de $0.50</div>
+      <input type="number" id="p-050" min="0" value="12"></div>`
+    :`<div class="fld"><div class="flb">Cantidad de bolos producidos</div>
+      <input type="number" id="p-cant" min="1" value="12"></div>`;
 }
 function subProd(){
-  const sab=$('p-sab').value,tan=+($('p-tan')?.value||1),esP=esPremium(sab);
-  let n25=0,n50=BT;
-  if(!esP){n25=+($('p-n25')?.value||0);n50=+($('p-n50')?.value||BT);}
-  if(!esP&&n25+n50!==BT){alert(`Los bolos por tanda deben sumar ${BT}.\nActualmente suman ${n25+n50}.`);return;}
-  const tot25=tan*n25,tot50=tan*n50,totBol=tot25+tot50;
-  const sk=D.stock[sab];
-  sk.d25+=tot25;sk.d50+=tot50;sk.p+=totBol;
+  const s=$('p-sab').value;
+  if(hasDualPrice(s)){
+    const n025=+($('p-025')?.value||0);
+    const n050=+($('p-050')?.value||0);
+    const total=n025+n050;
+    D.stock[s].d_025+=n025;
+    D.stock[s].d_050+=n050;
+    D.stock[s].p+=total;
+  } else {
+    const n=+($('p-cant')?.value||12);
+    D.stock[s].d+=n;
+    D.stock[s].p+=n;
+  }
   save();closeM();
 }
 
 // ── AJUSTE DE STOCK ───────────────────────────────────────────────────────────
 function tAjuste(sab){
-  const sk=D.stock[sab]||{d25:0,d50:0,p:0},esP=esPremium(sab),cat=catDe(sab);
-  return`<div class="inb">
-    <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-      <strong>${sab}</strong><span class="bdg ${cat.cls}">${cat.label}</span>
+  const st=D.stock[sab];
+  if(hasDualPrice(sab)){
+    return`<div class="inb">
+      <strong>${sab}</strong> ${catBadge(sab)}<br>
+      Stock actual: <strong>${st.d_025||0} de $0.25 + ${st.d_050||0} de $0.50</strong><br>
+      Total disponible: ${stockDisponible(sab)} · Producidos total: ${st.p}
     </div>
-    ${esP
-      ?`$0.50: <strong>${sk.d50||0} bolos</strong>`
-      :`<span class="precio-tag precio-25" style="margin-right:6px">${sk.d25||0} a $0.25</span><span class="precio-tag precio-50">${sk.d50||0} a $0.50</span>`}
-    <br>Producidos total: ${sk.p||0}
+    <div class="fld"><div class="flb">Nuevo stock $0.25</div>
+      <input type="number" id="aj-025" min="0" value="${st.d_025||0}"></div>
+    <div class="fld"><div class="flb">Nuevo stock $0.50</div>
+      <input type="number" id="aj-050" min="0" value="${st.d_050||0}"></div>
+    <button class="btn p fw" onclick="D.stock['${sab}'].d_025=+($('aj-025').value||0);D.stock['${sab}'].d_050=+($('aj-050').value||0);save();closeM()">Actualizar stock</button>`;
+  }
+  return`<div class="inb">
+    <strong>${sab}</strong> ${catBadge(sab)}<br>
+    Stock actual: <strong>${st.d||0} bolos disponibles</strong><br>
+    Producidos total: ${st.p}
   </div>
-  ${esP?'':`<div class="fld"><div class="flb">Bolos disponibles a $0.25</div>
-    <input type="number" id="aj-25" min="0" value="${sk.d25||0}"></div>`}
-  <div class="fld"><div class="flb">Bolos disponibles a $0.50</div>
-    <input type="number" id="aj-50" min="0" value="${sk.d50||0}"></div>
-  <button class="btn p fw" onclick="D.stock['${sab}'].d25=${esP?0:0};D.stock['${sab}'].d25=+($('aj-25')?.value||0);D.stock['${sab}'].d50=+($('aj-50')?.value||0);save();closeM()">Actualizar stock</button>`;
+  <div class="fld"><div class="flb">Nuevo stock disponible</div>
+    <input type="number" id="aj-d" min="0" value="${st.d||0}"></div>
+  <button class="btn p fw" onclick="D.stock['${sab}'].d=+($('aj-d').value||0);save();closeM()">Actualizar stock</button>`;
 }
 
 // ── TRANSACCIONES ─────────────────────────────────────────────────────────────
@@ -1031,27 +1256,24 @@ function tTrans(tipo,label){
 
 // ── CLIENTE MAYORISTA ─────────────────────────────────────────────────────────
 function tCliente(){
-  return`<div class="fld"><div class="flb">Nombre completo</div><input id="cl-nom" placeholder="Ej: María González"></div>
-  <div class="fld"><div class="flb">Teléfono</div><input id="cl-tel" placeholder="0999..."></div>
-  <div class="fld"><div class="flb">Barrio / Sector</div><input id="cl-bar" placeholder="Ej: Barrio La Paz"></div>
+  return`<div class="fld"><div class="flb">Nombre completo</div>
+    <input id="cl-nom" placeholder="Ej: María González"></div>
+  <div class="fld"><div class="flb">Teléfono</div>
+    <input id="cl-tel" placeholder="0999..."></div>
+  <div class="fld"><div class="flb">Barrio / Sector</div>
+    <input id="cl-bar" placeholder="Ej: Barrio La Paz"></div>
   <button class="btn p fw" onclick="const n=($('cl-nom')?.value||'').trim();if(!n)return alert('Ingresa el nombre');D.clientes.push({nombre:n,tel:$('cl-tel')?.value||'',barrio:$('cl-bar')?.value||'',pedidos:[]});save();closeM()">Guardar cliente</button>`;
 }
 
 // ── PEDIDO MAYORISTA ──────────────────────────────────────────────────────────
 function tPedido(ci){
-  const itemsHtml=CI.map((it,i)=>{
-    const esP=esPremium(it.s),sk=D.stock[it.s]||{d25:0,d50:0};
-    const precioOpts=esP?`<option value="0.5">$0.50</option>`
-      :`<option value="0.25"${it.precio===.25?' selected':''}>$0.25</option><option value="0.5"${it.precio===.50?' selected':''}>$0.50</option>`;
-    return`<div class="ci">
-      <select onchange="CI[${i}].s=this.value;if(esPremium(this.value))CI[${i}].precio=.50">
-        ${SAB.map(s=>`<option value="${s}"${s===it.s?' selected':''}>${s}</option>`).join('')}
-      </select>
-      <select onchange="CI[${i}].precio=+this.value">${precioOpts}</select>
-      <input type="number" min="1" value="${it.q}" oninput="CI[${i}].q=+this.value||1">
-      <button class="del" onclick="CI.splice(${i},1);rM()">×</button>
-    </div>`;
-  }).join('');
+  const itemsHtml=CI.map((it,i)=>`<div class="ci">
+    <select onchange="CI[${i}].s=this.value;rM()">
+      ${SAB.map(s=>`<option value="${s}"${s===it.s?' selected':''}>${s}</option>`).join('')}
+    </select>
+    <input type="number" min="1" value="${it.q}" oninput="CI[${i}].q=+this.value||1">
+    <button class="del" onclick="CI.splice(${i},1);rM()">×</button>
+  </div>`).join('');
   return`${itemsHtml}
   <button class="btn op fw" style="margin-bottom:10px" onclick="CI.push({s:SAB[0],q:1,precio:.50});rM()">+ Agregar sabor</button>
   <div class="fld"><div class="flb">Precio total pactado ($)</div>
@@ -1067,12 +1289,13 @@ function tPedido(ci){
 }
 function subPedido(ci){
   const tot=+($('pd-precio')?.value||0),nota=$('pd-nota')?.value||'',estado=$('pd-est')?.value||'pedido';
-  const cant=CI.reduce((a,it)=>a+(+it.q||0),0),desc=CI.map(it=>`${it.q}×${it.s} ${f$(+(it.precio||.50))}`).join(', ');
+  const cant=CI.reduce((a,it)=>a+(+it.q||0),0),desc=CI.map(it=>`${it.q} ${it.s}`).join(', ');
   D.clientes[ci].pedidos.push({desc,sab:CI[0].s,cant,total:tot,nota,fecha:hoy()});
-  const items=CI.map(it=>({s:it.s,q:+it.q,precio:+(it.precio||.50)}));
-  const venta={id:uid(),tipo:'comanda',cliente:D.clientes[ci].nombre,items,cant,total:tot,fecha:hoy(),sab:items[0].s,estado,pago:'',stockDeducted:false};
+  const items=CI.map(it=>({s:it.s,q:+it.q,precio:.50}));
+  const venta={id:uid(),tipo:'comanda',cliente:D.clientes[ci].nombre,items,cant,promos:0,total:tot,fecha:hoy(),sab:items[0].s,estado,pago:'',stockDeducted:false};
   if(estado!=='pendiente')deducirStock(venta);
-  D.ventas.push(venta);save();selCli=ci;closeM();
+  D.ventas.push(venta);
+  save();selCli=ci;closeM();
 }
 
 // ── CIERRE DE CAJA ────────────────────────────────────────────────────────────
@@ -1094,12 +1317,16 @@ function tCierre(){
 function openCfg(){_m={tipo:'cfg'};rM();}
 function tCfg(){
   return`<div class="inb">
-    <strong>Categorías y precios:</strong><br>
-    · <span class="bdg cat-clasica">Clásica</span> Vainilla, Oreo, Maracuyá, Fresa, Piña, Coco, Café, Mango, Banano, Chocolate<br>
-    &nbsp;&nbsp;Precio: $0.25 o $0.50 según producción<br><br>
-    · <span class="bdg cat-especial">Especial</span> Pay Limón, Galleta María, Ronpasa<br>
-    &nbsp;&nbsp;Precio: $0.25 o $0.50 según producción<br><br>
-    · <span class="bdg cat-premium">Premium</span> Queso, Cheesecake — siempre $0.50
+    <strong>Sistema de doble precio:</strong><br>
+    · Clásica y Especial: pueden ser $0.25 o $0.50<br>
+    · Premium: siempre $0.50<br><br>
+    <strong>Promos (solo para bolos de $0.50):</strong><br>
+    · Clásica: 3×$1.30<br>
+    · Especial: 4×$1.75<br>
+    · Premium: sin promo<br><br>
+    <strong>Especial:</strong> Pay Limón, Galleta María, Ronpasa<br>
+    <strong>Premium:</strong> Queso, Cheesecake<br>
+    <strong>Clásica:</strong> todos los demás
   </div>
   <div class="sep"></div>
   <div style="font-size:13px;font-weight:500;margin-bottom:8px">Exportar datos</div>
@@ -1108,7 +1335,7 @@ function tCfg(){
   <button class="btn op fw" style="margin-top:0" onclick="expC()">Exportar cierres (CSV)</button>
   <div class="sep"></div>
   <div class="inb">${D.ventas.length} ventas · ${D.trans.length} transacciones · ${D.clientes.length} clientes · ${D.cierres.length} cierres</div>
-  <button class="btn od fw" onclick="if(confirm('¿Borrar TODOS los datos? No se puede deshacer.')){D=defD();save();closeM();}">Restablecer todos los datos</button>`;
+  <button class="btn od fw" onclick="if(confirm('¿Borrar TODOS los datos? Esta acción no se puede deshacer.')){D=defD();save();closeM();}">Restablecer todos los datos</button>`;
 }
 function expV(){
   const r=[['Fecha','Cliente','Tipo','Detalle','Bolos','Total','Estado','Pago','StockDescontado'],
@@ -1127,6 +1354,7 @@ function expC(){
 }
 function dl(csv,name){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download=name;a.click();}
 
+// ── PWA ───────────────────────────────────────────────────────────────────────
 if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catch(()=>{});}
 load();
 </script>
